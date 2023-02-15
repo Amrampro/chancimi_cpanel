@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Admin;
 
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -24,11 +24,9 @@ class AdminController extends Controller
         ]);
 
         // Check user
-        $usercheck = Admin::where(['username'=>$request->username, 'password'=>$request->password])->count();
-        if($usercheck>0){
-            // storing admin infos in variable
-            $adminData = Admin::where(['username'=>$request->username, 'password'=>$request->password])->first();
-            session(['adminData'=>$adminData]);
+        $auth = Auth::guard("admin")->attempt(["username"=>$request->username,"password"=>$request->password]);
+       
+        if($auth){
             return redirect('admin/dashboard');
         } else {
             return redirect('admin/login')->with('error', 'Invalid inputs');

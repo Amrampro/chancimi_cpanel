@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-
+@php
+    $admin = auth("admin")->user();
+@endphp
 
 <head>
     <meta charset="utf-8">
@@ -26,11 +28,6 @@
     <link rel="stylesheet" href="{{ asset('backend') }}/css/jquery-jvectormap.css">
 
     <script src="{{ asset('backend') }}/{{ asset('backend') }}/js/modernizr.min.js"></script>
-    {{-- @if (!Session::has('adminData'))
-        <script type="text/javascript">
-        window.location.href="{{url('admin/login')}}";
-        </script>
-    @endif --}}
 </head>
 
 <body>
@@ -201,7 +198,7 @@
                                 <span class="ti-user"></span>
                             </a>
                             <div class="dropdown-menu proclinic-box-shadow2 profile animated flipInY">
-                                <h5>John Willing</h5>
+                                <h5>{{ auth('admin')->user()->username }}</h5>
                                 <a class="dropdown-item" href="{{url('admin/setting')}}">
 									<span class="ti-settings"></span> Settings</a>
                                 <a class="dropdown-item" href="{{url('admin/logout')}}">

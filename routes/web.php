@@ -47,20 +47,27 @@ Route::post('/save-comment/{slug}/{id}', [HomeController::class, 'save_comment']
 // Route::get('/', [HomeController::class, 'home']);
 
 // Loging/out
-Route::get('/admin/login', [AdminController::class, 'login']);
-Route::post('/admin/login', [AdminController::class, 'submit_login']);
-Route::get('/admin/logout', [AdminController::class, 'logout']);
+Route::middleware("guest:admin")->group(function(){
+    Route::get('/admin/login', [AdminController::class, 'login']);
+    Route::post('/admin/login', [AdminController::class, 'submit_login']);
+});
 // Settings
-Route::get('/admin/setting', [SettingController::class, 'index']);
-Route::post('/admin/setting', [SettingController::class, 'save_settings']);
+Route::middleware("auth:admin")->group(function(){
+    Route::get('/admin/logout', [AdminController::class, 'logout']);
 
-Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
-// Categories
-Route::get('/admin/category/{id}/delete', [CategoryController::class, 'destroy']);
-Route::resource('/admin/category', CategoryController::class);
+    Route::get('/admin/setting', [SettingController::class, 'index']);
+    Route::post('/admin/setting', [SettingController::class, 'save_settings']);
+    
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
+    // Categories
+    Route::get('/admin/category/{id}/delete', [CategoryController::class, 'destroy']);
+    Route::resource('/admin/category', CategoryController::class);
+    
+    Route::get('/admin/post/{id}/delete', [PostController::class, 'destroy']);
+    Route::resource('/admin/post', PostController::class);
+    
 
-Route::get('/admin/post/{id}/delete', [PostController::class, 'destroy']);
-Route::resource('/admin/post', PostController::class);
+});
 
 Auth::routes();
 
@@ -70,6 +77,8 @@ Route::resource('newsletter', NewsletterController::class);
 
 
 // Users section
-Route::get('/user/dashboard', [UsersController::class, 'dashboard']);
-Route::get('/user/settings', [UsersController::class, 'account']);
-Route::get('/user/maintenance', [UsersController::class, 'maintenance']);
+Route::middleware("auth")->group(function(){
+    Route::get('/user/dashboard', [UsersController::class, 'dashboard']);
+    Route::get('/user/settings', [UsersController::class, 'account']);
+    Route::get('/user/maintenance', [UsersController::class, 'maintenance']);
+});
