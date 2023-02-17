@@ -9,6 +9,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\SupportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,6 +80,11 @@ Route::resource('newsletter', NewsletterController::class);
 // Users section
 Route::middleware("auth")->group(function(){
     Route::get('/user/dashboard', [UsersController::class, 'dashboard']);
-    Route::get('/user/settings', [UsersController::class, 'account']);
-    Route::get('/user/maintenance', [UsersController::class, 'maintenance']);
+    // Route::get('/user/settings', [UsersController::class, 'account']);
+    Route::get('/user/connexions', [UsersController::class, 'maintenance']);
+    Route::get('/user/use_points', [UsersController::class, 'use_points']);
+    Route::get('/user/my_points', [UsersController::class, 'my_points']);
+
+    Route::resource('/user/settings', UsersController::class);
+    Route::resource('/user/support', SupportController::class);
 });
