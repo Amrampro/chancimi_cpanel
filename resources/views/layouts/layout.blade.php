@@ -96,7 +96,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{{url('/')}}">
                         <img src="{{ asset('frontend') }}/assets/img/logo.png" class="logo logo-scrolled"
                             alt="Logo">
                     </a>

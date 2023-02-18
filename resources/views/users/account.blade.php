@@ -13,7 +13,7 @@
                 <ul class="nav nav-pills flex-column flex-md-row mb-3">
                     <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i class="bx bx-user me-1"></i>
                             Compte</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages-account-settings-notifications.html"><i
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/user/notifications') }}"><i
                                 class="bx bx-bell me-1"></i> Notifications</a></li>
                     {{-- <li class="nav-item"><a class="nav-link" href="/user/connections"><i class="bx bx-link-alt me-1"></i>
                             Connexions</a></li> --}}
@@ -156,24 +156,29 @@
                     <!-- /Account -->
                 </div>
                 <div class="card">
-                    <h5 class="card-header">Désactiver le compte</h5>
+                    <h5 class="card-header">Supprimer le compte</h5>
                     <div class="card-body">
                         <div class="mb-3 col-12 mb-0">
                             <div class="alert alert-warning">
-                                <h6 class="alert-heading fw-bold mb-1">Are you sure you want to delete
-                                    your account?</h6>
-                                <p class="mb-0">Once you delete your account, there is no going back.
-                                    Please be certain.</p>
+                                <h6 class="alert-heading fw-bold mb-1">Voulez-vous vraiment supprimer
+                                    votre compte?</h6>
+                                <p class="mb-0">Une fois que vous avez supprimé votre compte, il n’y a pas de retour en
+                                    arrière.</p>
                             </div>
                         </div>
                         <form id="formAccountDeactivation" onsubmit="return false">
                             <div class="form-check mb-3">
                                 <input class="form-check-input" type="checkbox" name="accountActivation"
                                     id="accountActivation" />
-                                <label class="form-check-label" for="accountActivation">I confirm my
-                                    account deactivation</label>
+                                <label class="form-check-label" for="accountActivation">Je confirme la désactivation de
+                                    mon compte</label>
                             </div>
-                            <button type="submit" class="btn btn-danger deactivate-account">Deactivate Account</button>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                data-bs-placement="top" data-bs-html="true"
+                                title="<span>Action impossible !</span>">
+                                <i class='bx bx-trash bx-xs'></i> Désactivater
+                            </button>
+                            {{-- <button type="submit" class="btn btn-danger deactivate-account">Désactivater</button> --}}
                         </form>
                     </div>
                 </div>

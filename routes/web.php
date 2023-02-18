@@ -84,6 +84,8 @@ Route::middleware("auth")->group(function(){
     Route::get('/user/connexions', [UsersController::class, 'maintenance']);
     Route::get('/user/use_points', [UsersController::class, 'use_points']);
     Route::get('/user/my_points', [UsersController::class, 'my_points']);
+    Route::get('/user/my_wallet', [UsersController::class, 'maintenance']);
+    Route::get('user/notifications', [UsersController::class, 'maintenance']);
 
     Route::resource('/user/settings', UsersController::class);
     Route::resource('/user/support', SupportController::class);

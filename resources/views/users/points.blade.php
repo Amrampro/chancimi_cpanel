@@ -43,6 +43,14 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            {{-- <tr>
                                 <td>1</td>
                                 <td><strong>Site vitrine</strong></td>
                                 <td>Points</td>
@@ -57,7 +65,7 @@
                                 <td class="text-success fw-semibold"><i class='bx bx-up-arrow-alt'></i> + 7 pts</td>
                                 <td><span class="badge bg-label-warning me-1">En cours</span></td>
                                 <td><u><a href="#">Voir</a></u></td>
-                            </tr>
+                            </tr> --}}
                         </tbody>
                     </table>
                 </div>

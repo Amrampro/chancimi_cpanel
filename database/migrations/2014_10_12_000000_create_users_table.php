@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->integer('monnaie_id')->default('1');
             $table->integer('langue_id')->default('1');
-            $table->integer('points')->default('0');
+            $table->integer('points')->default('10');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

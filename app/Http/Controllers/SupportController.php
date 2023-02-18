@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Support;
+
 class SupportController extends Controller
 {
     /**
@@ -34,7 +36,22 @@ class SupportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'message' => 'required',
+        ]);
+
+        $support = new Support;
+        $support->user_id = $request->user_id;
+        $support->nom = $request->name;
+        $support->email = $request->email;
+        $support->message = $request->message;
+        $support->tel = $request->tel;
+        $save = $support->save();
+
+        if ($save)
+            return redirect('user/support')->with('success', 'Message Envoyé');
+        else
+            return redirect('user/support')->with('error', 'Message non Envoyé');
     }
 
     /**

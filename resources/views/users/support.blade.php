@@ -12,7 +12,18 @@
                     <small class="text-muted float-end">Temps maximum de réponse: 24hrs</small>
                 </div>
                 <div class="card-body">
-                    <form>
+                    @if (Session::has('success'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+                        @if (Session::has('errors'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ session('errors') }}
+                            </div>
+                        @endif
+                    <form method="post" action="{{url('/user/support')}}" enctype="multipart/form-data">
+                        @csrf
                         <div class="row g-2 mb-3">
                             <div class="col mb-0">
                                 <label for="nameWithTitle" class="form-label">Nom</label>
@@ -41,14 +52,14 @@
                                         class="bx bx-phone"></i></span>
                                 <input type="text" id="basic-icon-default-phone" class="form-control phone-mask"
                                     placeholder="658 799 8941" aria-label="658 799 8941"
-                                    aria-describedby="basic-icon-default-phone2" />
+                                    aria-describedby="basic-icon-default-phone2" name="tel" />
                             </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-icon-default-message">Message <small
                                     class="text-danger">*</small></label>
                             <div class="input-group input-group-merge speech-to-text">
-                                <textarea id="messageWrite" class="form-control" placeholder="Ecrivez ou faites un voice" rows="5"></textarea>
+                                <textarea name="message" id="messageWrite" class="form-control" placeholder="Ecrivez ou faites un voice" rows="5"></textarea>
                                 <span class="input-group-text">
                                     <i class='bx bx-microphone cursor-pointer text-to-speech-toggle'></i>
                                 </span>
@@ -56,7 +67,9 @@
                             <div class="form-text"> <strong class="text-danger">Important : </strong> L'écriture par voice
                                 marche uniquement dans la langue anglaise! </div>
                         </div>
-                        <input type="hidden" name="id" value="{{ auth()->user()->id }}">
+                        <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                        <input type="hidden" name="name" value="{{ auth()->user()->name }}">
+                        <input type="hidden" name="email" value="{{ auth()->user()->email }}">
                         <button type="submit" class="btn btn-primary">Envoyer</button>
                     </form>
                 </div>

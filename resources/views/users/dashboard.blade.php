@@ -8,11 +8,10 @@
                     <div class="d-flex align-items-end row">
                         <div class="col-sm-7">
                             <div class="card-body">
-                                <h5 class="card-title text-primary">Bienvenu(e) {{auth()->user()->name}}! 🎉</h5>
-                                <p class="mb-4">You have done <span class="fw-bold">72%</span> more
-                                    sales today. Check your new badge in your profile.</p>
-                                <a href="javascript:;" class="btn btn-sm btn-outline-primary">View
-                                    Badges</a>
+                                <h5 class="card-title text-primary">Bienvenu(e) {{ auth()->user()->name }}! 🎉</h5>
+                                <p class="mb-4">La santé de votre compte est de <span class="fw-bold">82%</span>.
+                                    Vérifiez votre nouveau badge dans votre profil.</p>
+                                <a href="javascript:;" class="btn btn-sm btn-outline-primary">Mon Badge</a>
                             </div>
                         </div>
                         <div class="col-sm-5 text-center text-sm-left">
@@ -41,14 +40,15 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
-                                            <a class="dropdown-item" href="javascript:void(0);">Commander un service</a>
-                                            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                                            <a class="dropdown-item" href="{{ url('/user/use_points') }}">Utiliser</a>
+                                            <a class="dropdown-item" href="{{ url('/user/my_points') }}">Historique</a>
                                         </div>
                                     </div>
                                 </div>
                                 <span class="fw-semibold d-block mb-1">Points</span>
-                                <h3 class="card-title text-nowrap mb-1">50</h3>
-                                <small class="text-success fw-semibold"><i class='bx bx-up-arrow-alt'></i> +28.42%</small>
+                                <h3 class="card-title text-nowrap mb-1">{{ auth()->user()->points }}</h3>
+                                <small class="text-success fw-semibold">Utilisable</small>
+                                {{-- <small class="text-success fw-semibold"><i class='bx bx-up-arrow-alt'></i> +28.42%</small> --}}
                             </div>
                         </div>
                     </div>
@@ -66,8 +66,8 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
-                                            <a class="dropdown-item" href="javascript:void(0);">Faire un retrait</a>
-                                            <a class="dropdown-item" href="javascript:void(0);">Détails</a>
+                                            <a class="dropdown-item" href="#">Faire un retrait</a>
+                                            <a class="dropdown-item" href="#">Détails</a>
                                         </div>
                                     </div>
                                 </div>
@@ -75,7 +75,7 @@
                                 <span class="fw-semibold d-block mb-1">Revenus</span>
                                 <h3 class="card-title text-nowrap mb-1">0</h3>
                                 {{-- <small class="text-success fw-semibold"> ( Monnaie )</small> --}}
-                                <small class="text-success fw-semibold"> ( Indisponible )</small>
+                                <small class="text-danger fw-semibold"> ( Indisponible )</small>
                             </div>
                         </div>
                     </div>
