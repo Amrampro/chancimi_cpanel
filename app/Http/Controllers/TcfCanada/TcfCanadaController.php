@@ -40,7 +40,7 @@ class TcfCanadaController extends Controller
 
     public function tcf_session($session){
         $tcfc = Tcf_canada::where('id', $session)->get();
-        return("Entered");
+        return("Entered in file");
     }
 
     /**
