@@ -1,7 +1,7 @@
 @extends('layouts/layout')
 @section('content')
     <!-- Start Breadcrumb
-                                                                                            ============================================= -->
+                                                                                                    ============================================= -->
     <div class="breadcrumb-area shadow dark bg-fixed text-center padding-xl text-light"
         style="background-image: url({{ asset('frontend') }}/assets/img/banner/6.jpg);">
         <div class="container">
@@ -19,79 +19,38 @@
     <!-- End Breadcrumb -->
 
     <!-- Start About
-                                                                                                ============================================= -->
+                                                                                                        ============================================= -->
     <div id="about" class="about-area border-top default-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 info">
                     <h2>A propos de GoulBAM Enterprises</h2>
                     <p>
-                        Nous sommes une startup du domaine informatique qui depuis sa création, a pour but principale de
+                        Nous sommes une startup du domaine informatique qui, depuis sa création, a pour but principal de
                         contribuer dans l'innovation numérique notament en apportant des solutions informatiques aux
-                        entreprises quelqu'en soit le domaine de leur activité.
+                        entreprises, quelque soit leur domaine d'activité.
                     </p>
                     </p>
                     Depuis sa création en 2019, la structure a été en mesure de fournir une large gamme de
-                    services et de produits informatiques pour les clients. De nos jours, la structures est en majeur partie
-                    composée des ingénieurs de travaux informatiques et d'autres personnels professionnels dans leurs
-                    différents domaines. Nous comptons à ce jour des multiples projets déployé pour informatiser(numériser,
-                    digitaliser) des entreprises même en occcident. Nous nous occupons principalement de
-                    la fourniture de services informatiques tels que des sites Web, des logiciels de gestion,
-                    des applications Web, des applications mobiles et d'autres outils Web, puis
+                    services et de produits informatiques pour les clients. De nos jours, la structure est en majeure partie
+                    composée des ingénieurs de travaux informatiques et d'autres professionnels dans leurs
+                    différents domaines. Nous comptons à ce jour de multiples projets d'informatisation(numérisation,
+                    digitalisation) d'entreprise déployées jusqu'en Occident. Nous nous occupons principalement des
+                    prestations de services informatiques tels que des sites Web, des logiciels de gestion,
+                    des applications Web et mobiles, d'autres outils Web,
                     de la conception graphique (dépliants, cartes de visite, Flyers,...) et plus encore.
                     Notre objectif principal est de vous fournir le meilleur service possible qui
                     répond à vos besoins et à vos exigences.
                     </p>
                     <p>
-                        Par allieurs, nous offronts aussi des formations tels que La formation en programmation
-                        informatique,formation en bureautique, formation en montage des visuels graphique.
+                        Par allieurs, nous offrons aussi des formations telles que programmation
+                        informatique, bureautique, montage des visuels graphiques.
                     </p>
                     <ul>
-                        <li>Digitaliser, numériser les entreprises</li>
-                        <li>Créations de visuels graphique</li>
-                        <li>Formation en informatique(programmation informatique, bureautique, )</li>
+                        <li>Site web, logiciels, etc.</li>
+                        <li>Créations de visuels graphiques</li>
+                        <li>Formation en informatique (programmation informatique, bureautique,etc.)</li>
                     </ul>
-                    {{-- <div class="fun-facts">
-                        <h3>Outstanding annual results from our awesome Team</h3>
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4 item">
-                                <div class="fun-fact clients">
-                                    <div class="timer" data-to="30" data-speed="5000">30</div>
-                                    <span class="medium">Clients</span>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 item">
-                                <div class="fun-fact invest">
-                                    <div class="timer" data-to="2" data-speed="5000">2</div>
-                                    <span class="medium">Revenus</span>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 item">
-                                <div class="fun-fact">
-                                    <div class="timer" data-to="98" data-speed="5000">98</div>
-                                    <span class="medium">Taux de réussite</span>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 item">
-                                <div class="fun-fact">
-                                    <div class="timer" data-to="75" data-speed="5000">75</div>
-                                    <span class="medium">Higher Profits</span>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 item">
-                                <div class="fun-fact">
-                                    <div class="timer" data-to="100" data-speed="5000">100</div>
-                                    <span class="medium">Satisfied</span>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 item">
-                                <div class="fun-fact">
-                                    <div class="timer" data-to="98" data-speed="5000">98</div>
-                                    <span class="medium">Success Rate</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
                 </div>
                 <div class="col-lg-6 col-md-6 thumb">
                     <img src="{{ asset('frontend') }}/assets/img/illustrations/1.png" alt="Thumb">
@@ -99,44 +58,36 @@
                 <div class="col-md-12 col-lg-12 fun-facts">
                     <h3>Outstanding annual results from our awesome Team</h3>
                     <div class="row">
-                        <div class="col-md-4 col-sm-4 item">
+                        <div class="col-md-3 col-sm-3 item">
                             <div class="fun-fact clients">
                                 <div class="timer" data-to="30" data-speed="5000">30</div>
                                 <span class="medium">Clients</span>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-4 item">
-                            <div class="fun-fact invest">
-                                <div class="timer" data-to="2" data-speed="5000">2</div>
-                                <span class="medium">Revenus</span>
+                        <div class="col-md-3 col-sm-3 item">
+                            <div class="fun-fact clients">
+                                <div class="timer" data-to="45" data-speed="5000">5</div>
+                                <span class="medium">Projets</span>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-4 item">
+                        <div class="col-md-3 col-sm-3 item">
                             <div class="fun-fact">
                                 <div class="timer" data-to="98" data-speed="5000">98</div>
-                                <span class="medium">Taux de réussite</span>
+                                <span class="medium">Taux de satisfaction</span>
                             </div>
                         </div>
-                        
-                <div class="col-lg-12 col-md-12 fun-facts"></div>
-                        <div class="col-md-4 col-sm-4 item">
-                            <div class="fun-fact">
-                                <div class="timer" data-to="75" data-speed="5000">75</div>
-                                <span class="medium">Higher Profits</span>
+                        <div class="col-md-3 col-sm-3 item">
+                            <div class="fun-fact clients">
+                                <div class="timer" data-to="4200" data-speed="5000">4200</div>
+                                <span class="medium">Followers</span>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-4 item">
-                            <div class="fun-fact">
+                        {{-- <div class="col-md-3 col-sm-3 item">
+                            <div class="fun-fact clients">
                                 <div class="timer" data-to="100" data-speed="5000">100</div>
-                                <span class="medium">Satisfied</span>
+                                <span class="medium">Followers</span>
                             </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4 item">
-                            <div class="fun-fact">
-                                <div class="timer" data-to="98" data-speed="5000">98</div>
-                                <span class="medium">Success Rate</span>
-                            </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12 fun-facts"></div>
@@ -146,17 +97,18 @@
     <!-- End About -->
 
     <!-- Start Features Area
-                                                                                                ============================================= -->
+                        ============================================= -->
     <div id="features" class="features-area carousel-shadow default-padding bg-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
                     <div class="site-heading text-center">
-                        <h2>Our Features</h2>
+                        <h2>NOS SERVICES</h2>
                         <p>
-                            Learning day desirous informed expenses material returned six the. She enabled invited exposed
-                            him another. Reasonably conviction solicitude me mr at discretion reasonable. Age out full gate
-                            bed day lose.
+                            Nous fournissons des services de qualité à nos clients et
+                            nous travaillons avec une grande passion.
+                            Ne vous souciez plus de vos problèmes en TIC, faites nous
+                            confiance nous vous facilitons la vie. Allez-y, Jetez un coup d'œil !
                         </p>
                     </div>
                 </div>
@@ -171,12 +123,13 @@
                                 <i class="flaticon-drag-2"></i>
                             </div>
                             <div class="info">
-                                <h4>Drag And Drop</h4>
+                                <h4>Site web et logiciels</h4>
                                 <p>
-                                    Situation perpetual allowance offending as principle.
+                                    Nous conçevons vos sites web et logiciels (de gestion ou autres...) et les gérons pour
+                                    vous sur la base d'un contrat.
                                 </p>
                                 <div class="bottom">
-                                    <a href="#">View Details <i class="fas fa-angle-right"></i></a>
+                                    <a href="#">Voir les details <i class="fas fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -188,12 +141,15 @@
                                 <i class="flaticon-software"></i>
                             </div>
                             <div class="info">
-                                <h4>App Integration</h4>
+                                <h4>Formations</h4>
                                 <p>
-                                    Situation perpetual allowance offending as principle.
+                                    Dans le soucis de transmettre les connaissances et augmenter le potentiel humain dans
+                                    le domaine des TICs,
+                                    Notre entreprise oeuvre pour la formation dans les différents angles de l'informatique
+                                    tels que...
                                 </p>
                                 <div class="bottom">
-                                    <a href="#">View Details <i class="fas fa-angle-right"></i></a>
+                                    <a href="#">Voir les details <i class="fas fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -205,12 +161,13 @@
                                 <i class="flaticon-rgb"></i>
                             </div>
                             <div class="info">
-                                <h4>Color Schemes</h4>
+                                <h4>Medias de communication</h4>
                                 <p>
-                                    Situation perpetual allowance offending as principle.
+                                    Il s'agit ici de la confection des Flyers, Cartes de visites, CVs, Bannières, brochures,
+                                    Stickers(Auto-collants), Roll-up, Charte graphique, affiches publicitaires...
                                 </p>
                                 <div class="bottom">
-                                    <a href="#">View Details <i class="fas fa-angle-right"></i></a>
+                                    <a href="#">Voir les details <i class="fas fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -222,12 +179,14 @@
                                 <i class="flaticon-video"></i>
                             </div>
                             <div class="info">
-                                <h4>High Resolution</h4>
+                                <h4>Marketing Digital</h4>
                                 <p>
-                                    Situation perpetual allowance offending as principle.
+                                    Votre visibilité sur le Web: Grand atout stratégique à ne pas négliger.
+                                    Nous dévéloppons des stratégies sur vos plateformes en ligne: Des posts
+                                    sponsorisés pour plus de clients(locaux ou internationaux) et ventes,...
                                 </p>
                                 <div class="bottom">
-                                    <a href="#">View Details <i class="fas fa-angle-right"></i></a>
+                                    <a href="#">Voir les details <i class="fas fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -240,7 +199,7 @@
     <!-- End Features Area -->
 
     <!-- Start Work Process Area
-                                                                                                ============================================= -->
+                                                                                                        ============================================= -->
     <div id="process" class="work-process-area default-padding">
         <div class="container">
             <div class="row">
@@ -248,11 +207,11 @@
                     <div class="site-heading text-center">
                         <h2>Processus De Travail</h2>
                         <p>
-                            Nous utilisons la méthode SCRUM car cela permet au client d'être informé à chaque étape sur
-                            l'evolution de son projet. Ainsi, avec cette méthode, il y'a la facilité de detecter les erreurs
-                            ou zones d'ombres à temps et rapidement corriger et adapter selon ses besoins à lui ce qui
-                            resulte à un gain de temps considérable. <i><u><a href="#">En savoir plus sur cette
-                                        méthode...</a></u></i>
+                            Nous utilisons la méthode SCRUM car cela permet au client d'être informé de l'évolution de son
+                            projet
+                            étape après étape. Cette méthode facilite la détection des erreurs
+                            ou zones d'ombres à temps et permet de corriger et adapter selon les besoins du client pour un
+                            gain de temps optimal. <i><u><a href="#">En savoir plus sur cette méthode...</a></u></i>
                         </p>
                         {{-- <p>
                             La méthode Scrum fonctionne sur le principe des sprints : des cycles de travail de deux semaines
@@ -293,8 +252,8 @@
                                 <div class="content">
                                     <h4>Vérification de l'evolution</h4>
                                     <p>
-                                        Ici, le client est notifié de l'évolution en temps réel de son projet. Il peut donc
-                                        apporter des modifications ou changement dans cette étape avant la validation.
+                                        Le client est notifié de l'évolution en temps réel de son projet. Il peut donc y
+                                        apporter des modifications ou changements dans cette étape avant la validation.
                                     </p>
                                 </div>
                             </li>
@@ -305,8 +264,8 @@
                                 <div class="content">
                                     <h4>Fermeture de l'étape</h4>
                                     <p>
-                                        Après avoir terminé avec les vérifications et modification, l'étape en cours est
-                                        fermé et nous passons à une nouvelle étape en utilisant le même processus.
+                                        Après avoir terminé avec les vérifications et modifications, l'étape en cours est
+                                        fermée et nous passons à une nouvelle étape en utilisant le même processus.
                                     </p>
                                 </div>
                             </li>
@@ -321,7 +280,7 @@
 
 
     <!-- Start Team Area
-                                                                                                ============================================= -->
+                                                                                                        ============================================= -->
     <div id="team" class="team-area default-padding bottom-less">
         <div class="container">
             <div class="row">
@@ -339,88 +298,34 @@
             <div class="row">
                 <div class="team-items text-center">
                     <!-- Single Item -->
-                    <div class="col-md-4 equal-height single-item">
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="{{asset('frontend')}}/assets/img/team/1.jpg" alt="Thumb">
-                                <ul>
-                                    <li class="facebook">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li class="twitter">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li class="instagram">
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </li>
-                                    <li class="linkedin">
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="info">
-                                <h4>Ahmed Kamal</h4>
-                                <span>Co-Founder</span>
-                                <h5><i class="fas fa-envelope"></i> kamal@admin.com</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="col-md-4 equal-height single-item">
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="{{asset('frontend')}}/assets/img/team/2.jpg" alt="Thumb">
-                                <ul>
-                                    <li class="facebook">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li class="twitter">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li class="instagram">
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </li>
-                                    <li class="linkedin">
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="info">
-                                <h4>Munia Ankor</h4>
-                                <span>Project Manager</span>
-                                <h5><i class="fas fa-envelope"></i> munia@admin.com</h5>
+                    @foreach ($teams as $team)
+                        <div class="col-md-4 equal-height single-item">
+                            <div class="item">
+                                <div class="thumb">
+                                    <img src="{{ asset('frontend') }}/assets/img/team/{{$team->photo}}" alt="Thumb">
+                                    {{-- <ul>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                        <li class="linkedin">
+                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+                                    </ul> --}}
+                                </div>
+                                <div class="info">
+                                    <h4>{{$team->nom}}</h4>
+                                    <span>{{$team->role}}</span>
+                                    <h5><i class="fas fa-envelope"></i> {{$team->email}}</h5>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="col-md-4 equal-height single-item">
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="{{asset('frontend')}}/assets/img/team/3.jpg" alt="Thumb">
-                                <ul>
-                                    <li class="facebook">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li class="twitter">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li class="instagram">
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </li>
-                                    <li class="linkedin">
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="info">
-                                <h4>Ahel Natasha</h4>
-                                <span>Developer</span>
-                                <h5><i class="fas fa-envelope"></i> natasha@admin.com</h5>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                     <!-- End Single Item -->
                 </div>
             </div>
@@ -428,167 +333,78 @@
     </div>
     <!-- End Team Area -->
 
-<!-- Start Blog Area
-        ============================================= -->
-        <div id="blog" class="blog-area default-padding bottom-less">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
-                        <div class="site-heading text-center">
-                            <h2>NOUVELLES RÉCENTES</h2>
-                            <p>
-                                Jetez un œil à nos dernières actualités et soyez au courant de nos dernières
-                                histoires. Nous sommes toujours à la recherche de nouvelles façons de vous tenir informé.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="blog-items">
-                        <!-- Single Item -->
-                        <div class="col-md-4 single-item">
-                            <div class="item">
-                                <div class="thumb">
-                                    <a href="single.html"><img src="{{ asset('frontend') }}/assets/img/blog/1.jpg"
-                                            alt="Thumb"></a>
-                                </div>
-                                <div class="info">
-                                    <div class="content">
-                                        <div class="date">
-                                            15 Aug, 2019
-                                        </div>
-                                        <h4>
-                                            <a href="single.html">Direct wicket little of talked lasted formed</a>
-                                        </h4>
-                                        <p>
-                                            Pronounce we attention admitting on assurance of suspicion conveying. That his
-                                            west quit had met till.
-                                        </p>
-                                        <a href="single.html">Read More <i class="fas fa-angle-right"></i></a>
-                                    </div>
-                                    <div class="meta">
-                                        <ul>
-                                            <li>
-                                                <a href="#">
-                                                    <img src="{{ asset('frontend') }}/assets/img/team/4.jpg" alt="Author">
-                                                    <span>Author</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fas fa-comments"></i>
-                                                    <span>05</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fas fa-share-alt"></i>
-                                                    <span>37</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Item -->
-                        <!-- Single Item -->
-                        <div class="col-md-4 single-item">
-                            <div class="item">
-                                <div class="thumb">
-                                    <a href="single.html"><img src="{{ asset('frontend') }}/assets/img/blog/2.jpg"
-                                            alt="Thumb"></a>
-                                </div>
-                                <div class="info">
-                                    <div class="content">
-                                        <div class="date">
-                                            27 Nov, 2019
-                                        </div>
-                                        <h4>
-                                            <a href="single.html">Supported neglected met therefore unwilling</a>
-                                        </h4>
-                                        <p>
-                                            Pronounce we attention admitting on assurance of suspicion conveying. That his
-                                            west quit had met till.
-                                        </p>
-                                        <a href="single.html">Read More <i class="fas fa-angle-right"></i></a>
-                                    </div>
-                                    <div class="meta">
-                                        <ul>
-                                            <li>
-                                                <a href="#">
-                                                    <img src="{{ asset('frontend') }}/assets/img/team/2.jpg" alt="Author">
-                                                    <span>Author</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fas fa-comments"></i>
-                                                    <span>17</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fas fa-share-alt"></i>
-                                                    <span>22</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Item -->
-                        <!-- Single Item -->
-                        <div class="col-md-4 single-item">
-                            <div class="item">
-                                <div class="thumb">
-                                    <a href="single.html"><img src="{{ asset('frontend') }}/assets/img/blog/3.jpg"
-                                            alt="Thumb"></a>
-                                </div>
-                                <div class="info">
-                                    <div class="content">
-                                        <div class="date">
-                                            18 Sep, 2019
-                                        </div>
-                                        <h4>
-                                            <a href="single.html">Concerns greatest margaret absolute entrance</a>
-                                        </h4>
-                                        <p>
-                                            Pronounce we attention admitting on assurance of suspicion conveying. That his
-                                            west quit had met till.
-                                        </p>
-                                        <a href="single.html">Read More <i class="fas fa-angle-right"></i></a>
-                                    </div>
-                                    <div class="meta">
-                                        <ul>
-                                            <li>
-                                                <a href="#">
-                                                    <img src="{{ asset('frontend') }}/assets/img/team/1.jpg" alt="Author">
-                                                    <span>Author</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fas fa-comments"></i>
-                                                    <span>25</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fas fa-share-alt"></i>
-                                                    <span>50</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Item -->
+    <!-- Start Blog Area
+                                ============================================= -->
+    <div id="blog" class="blog-area default-padding bottom-less">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2>NOUVELLES RÉCENTES</h2>
+                        <p>
+                            Jetez un œil à nos dernières actualités et soyez au courant de nos dernières
+                            histoires. Nous sommes toujours à la recherche de nouvelles façons de vous tenir informé.
+                        </p>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="blog-items">
+                    @foreach ($posts as $post)
+                        <!-- Single Item -->
+                        <div class="col-md-4 single-item">
+                            <div class="item">
+                                <div class="thumb">
+                                    <a href="{{  url('detail/'.Str::slug($post->title).'/'.$post->id) }}"><img
+                                            src="{{ asset('/frontend/assets/img/blog/thumb') . '/' . $post->thumb }}"
+                                            alt="Thumb"></a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="content">
+                                    <div class="date">
+                                        {{ $post->created_at->format('d M, Y') }}
+                                    </div>
+                                    <h4>
+                                        <a
+                                            href="{{  url('detail/'.Str::slug($post->title).'/'.$post->id) }}">{{ implode(' ', array_slice(explode(' ', $post->title), 0, 4)) }}...</a>
+                                    </h4>
+                                    <p>
+                                        {{ implode(' ', array_slice(explode(' ', $post->detail), 0, 10)) }}...
+                                    </p>
+                                    <a href="{{  url('detail/'.Str::slug($post->title).'/'.$post->id) }}">Lire Plus <i
+                                            class="fas fa-angle-right"></i></a>
+                                </div>
+                                <div class="meta">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="{{ asset('frontend') }}/assets/img/team/gounbam.jpg"
+                                                    alt="Author">
+                                                <span>Admin</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fas fa-comments"></i>
+                                                <span>{{ count($post->comments) }}</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fas fa-eye"></i>
+                                                <span>37</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Item -->
+                    @endforeach
+                </div>
+            </div>
         </div>
-        <!-- End Blog Area -->
+    </div>
+    <!-- End Blog Area -->
 @endsection

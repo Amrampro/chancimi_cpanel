@@ -1,7 +1,7 @@
 @extends('layouts/layout')
 @section('content')
     <!-- Start Banner
-                                        ============================================= -->
+                                                ============================================= -->
     <div class="banner-area fixed-top bg-theme-small bg-cover"
         style="background-image: url({{ asset('frontend') }}/assets/img/shape-bg.jpg);">
         <!-- Side Bg -->
@@ -15,10 +15,11 @@
                     <div class="row">
                         <div class="col-md-6 left-info">
                             <div class="content" data-animation="animated fadeInUpBig">
-                                <h1>Nos <span>Services</span> de qualités</h1>
+                                <h1>Nos <span>Services</span> de qualité</h1>
                                 <p>
-                                    Si vous souhaitez savoir quels services nous offrons, alors vous êtes au bon endroit.
-                                    Ici nous allons vous présenter nos différents prestations
+                                    Vous souhaitez connaitre nos différents services offerts et le tarifaire, vous êtes au
+                                    bon endroit.
+                                    Ici nous allons vous présenter nos différentes prestations et les prix y afférents.
                                 </p>
                                 <a class="btn btn-theme border btn-md" href="#process">Allons-y</a>
                             </div>
@@ -30,7 +31,7 @@
     </div>
     <!-- End Banner -->
     <!-- Start Work Step
-                                        ============================================= -->
+                                                ============================================= -->
     <div id="process" class="work-step-area default-padding">
         <div class="container">
             <div class="row">
@@ -58,24 +59,26 @@
                                     <div class="col-md-6 info">
                                         <div class="title">
                                             <strong>01</strong>
-                                            <h2>Développement siteweb et logiciels</h2>
+                                            <h2>Développement site web et logiciels</h2>
                                         </div>
                                         <p>
-                                            La premiere visibilité recherché par l'entreprise est d'abord celle d'être
-                                            vu dans son espace internet à elle. C'est la raison pour laquelle pour des
-                                            entreprises ou des individues, nous dévéloppons vos sites internets sur mesure
-                                            pour faciliter votre installation sur l'echelle global.
+                                            L'un des objectifs d'une entreprise c'est la visibilité. A l'ère du numérique,
+                                            internet est un atout non négligeable; C'est la raison pour laquelle pour vous,
+                                            entreprises ou particuliers, nous développons vos sites web sur mesure
+                                            pour faciliter votre installation sur l'echelle globale.
                                         </p>
                                         <p>
-                                            Par ailleurs, nous sommes conscient du fait que la structure peut rencontrer
-                                            des difficultés dans des besoins interne. C'est la raison pour laquelle parmis
-                                            nos services figurent aussi la création des logiciels simple comme web.
+                                            Par ailleurs, nous sommes conscients du fait que la structure pourrait
+                                            rencontrer
+                                            des difficultés en interne. Pour cela, nous proposons également la création des
+                                            logiciels de gestion d'entreprise (logiciel de gestion du personnel,
+                                            meeting, vente, rappel en structure...).
                                         </p>
                                         <ul>
-                                            <li>Siteweb (Vitrine et autre)</li>
+                                            <li>Site web (Vitrine et autre)</li>
                                             <li>Logiciel de gestion</li>
                                             <li>E-commerce, E-learning,...</li>
-                                            <li>Middleton principle</li>
+                                            {{-- <li>Middleton principle</li> --}}
                                         </ul>
                                         <a class="btn btn-theme border btn-md" href="/webprice">Voir La Grille</a>
                                     </div>
@@ -99,21 +102,23 @@
                                         </div>
                                         <p>
                                             L'autre angle de nos services est de fournir des visuels à nos clients.
-                                            Comme le précédent, celui-ci peut être pour un individu, une entreprise et
-                                            même pour un évenement. Alors nous fournissons des Flyers, Bannières,
-                                            CVs, Cartes de visites,...
+                                            Comme le précédent, celui-ci peut être pour un particulier ou une entreprise, un
+                                            projet ou un évenement personnel ou professionnel. Nous fournissons des Flyers,
+                                            Bannières,
+                                            CVs, Cartes de visites, Roll-up, Sticker commerciaux,...
                                         </p>
                                         <p>
-                                            Ces réalisations peuvent être vu certains dans la section blog et d'autres
-                                            sur nos différentes plate-forme.
+                                            Vous pouvez consulter nos différentes réalisations à partir de la section blog
+                                            et sur
+                                            nos différentes plateformes numériques.
                                         </p>
                                         <ul>
                                             <li>Cartes de visites</li>
                                             <li>Flyers</li>
-                                            <li>CVs</li>
+                                            <li>Roll-up</li>
                                             <li>Bannières,...</li>
                                         </ul>
-                                        <a class="btn btn-theme border btn-md" href="#">Get Started</a>
+                                        {{-- <a class="btn btn-theme border btn-md" href="#">Get Started</a> --}}
                                     </div>
                                 </div>
                             </div>
@@ -131,25 +136,32 @@
                                     <div class="col-md-6 info">
                                         <div class="title">
                                             <strong>03</strong>
-                                            <h2>Formations en informatique</h2>
+                                            <h2>Formations en TICs</h2>
                                         </div>
                                         <p>
-                                            Depuis un certains temps nous avons été actif dans la transmission
-                                            de notre savoir faire car pour nous, la connaissance ne se donne pas
+                                            {{-- Dans le soucis de transmettre les connaissances et augmenter le potentiel humain
+                                            dans le domaine des TICs,
+                                            Notre entreprise oeuvre pour la formation dans les différents angles de
+                                            l'informatique
+                                            tels que... --}}
+
+                                            Nous avons été actif dans la transmission
+                                            de notre savoir-faire car pour nous, la connaissance ne se donne pas
                                             simplement mais se multiplie.
                                         </p>
                                         <p>
-                                            Constitué des ingénieurs dans leurs domaines, nous offrons des
+                                            Notre équipe constituée principalement d'ingénieurs dans leurs domaines offre
+                                            des
                                             formations en programmation informatique, montage visuel (Adobe Photoshop,...),
-                                            sécretariat bureautique (suite office,...).
+                                            sécretariat bureautique (suite office,...), etc.
                                         </p>
                                         <ul>
                                             <li>Programmation informatique</li>
                                             <li>Infographie</li>
                                             <li>Sécretariat bureatique</li>
-                                            <li>Middleton principle</li>
+                                            {{-- <li>Middleton principle</li> --}}
                                         </ul>
-                                        <a class="btn btn-theme border btn-md" href="#">Get Started</a>
+                                        {{-- <a class="btn btn-theme border btn-md" href="#">Get Started</a> --}}
                                     </div>
                                 </div>
                             </div>
@@ -163,13 +175,13 @@
     <!-- End Work Step Area -->
 
     <!-- Start Services Area
-                                        ============================================= -->
+                                                ============================================= -->
     <div id="services" class="services-area default-padding bottom-less bg-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
                     <div class="site-heading text-center">
-                        <h2>Ce que nous offrons</h2>
+                        <h2>Nos offres</h2>
                         {{-- <p>
                                                             Learning day desirous informed expenses material returned six the. She enabled invited exposed
                                                             him another. Reasonably conviction solicitude me mr at discretion reasonable. Age out full gate
@@ -185,9 +197,9 @@
                         <div class="item">
                             <div class="info">
                                 <i class="flaticon-project"></i>
-                                <h4>Site Internet</h4>
+                                <h4>Site web</h4>
                                 <p>
-                                    Vitrine, dynamique, ONGs, e-commerce, e-learning,...
+                                    Vitrine, dynamique, ONG, e-commerce, e-learning,...
                                 </p>
                             </div>
                         </div>
@@ -198,7 +210,7 @@
                         <div class="item">
                             <div class="info">
                                 <i class="flaticon-concept"></i>
-                                <h4>Dévélopment de logiciels</h4>
+                                <h4>Dévéloppement de logiciels</h4>
                                 <p>
                                     Logiciel de gestion, vente, rappel en structure,...
                                 </p>
@@ -239,7 +251,7 @@
                                 <i class="flaticon-updated"></i>
                                 <h4>Suivi des équipements</h4>
                                 <p>
-                                    Maintenance des logiciel, analyse et reparation des systèmes,...
+                                    Maintenance des logiciels, analyse et reparation des systèmes,...
                                 </p>
                             </div>
                         </div>
@@ -250,9 +262,9 @@
                         <div class="item">
                             <div class="info">
                                 <i class="flaticon-help"></i>
-                                <h4>Marketing digitale</h4>
+                                <h4>Marketing digital</h4>
                                 <p>
-                                    Promotion de votre activité sur des plate-formes tel que facebook,...
+                                    Promotion de votre activité sur des plateformes telles que Facebook, Twitter,...
                                 </p>
                             </div>
                         </div>
@@ -265,7 +277,7 @@
     <!-- End Services Area -->
 
     <!-- Start Video Area
-                                                                                                                                            ============================================= -->
+                                                                                                                                                    ============================================= -->
     <div class="video-area text-light bg-theme default-padding">
         <!-- Side Bg -->
         <div class="side-bg">
@@ -279,17 +291,18 @@
                         <h2>Travaillez avec nous !</h2>
                         <h4>Pour nos clients</h4>
                         <p>
-                            En etant un client, chaque travail que nous faisons pour vous ajoute un certains nombre de
-                            points dans votre compte chez nous. Ainsi, avec suffisament de points, vous pouvez commander un
-                            travail gratuit ou avec une reduction de prix selon la suffisance de vos points et votre rang
-                            chez nous. Wow! vos commandez un travail et nous vous payons pour votre travail :)
+                            <b>Wow! vous commandez un service et nous vous payons pour avoir commandé ce service !</b>
+                            En étant un client, chaque travail que vous commandez chez nous vous donne droit à un certain
+                            nombre de
+                            points. Ainsi, chaque nombre de point correspond à un palier et les différents paliers
+                            présentent des
+                            bonus divers à savoir : service gratuit, réduction des prix et bien d'autres.
                         </p>
-                        <h4>Pour les non-clients</h4>
+                        <h4>Pour ceux qui nous recommandent</h4>
                         <p>
-                            Une façon tout autre et assez simple de gagner de l'argent avec nous est de diriger
-                            des clients vers nous. chaque projet que vous dirigez vers nous vous êtes payé
-                            pour ce projet là; et ceci sans lever le petit doight. Pour chaque redirection vous obtenez
-                            automatiquement 10% par projet.
+                            Une toute autre façon et assez simple d'ailleurs de gagner de l'argent avec nous est de diriger
+                            des clients vers nous. Vous recevez une commission sur chaque projet que vous dirigez vers nous;
+                            Pour chaque redirection vous obtenez automatiquement <b>10%</b> par projet.
                         </p>
                         {{-- <ul>
                             <li>Incommode existence put out suffering certainly.</li>
@@ -313,12 +326,12 @@
     <!-- End Video Area -->
 
     <!-- Start Faq
-                                                                                                                                            ============================================= -->
+                                                                                                                                                    ============================================= -->
     <div id="faq" class="faq-area default-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-5 thumb">
-                    <img src="{{asset('frontend')}}/assets/img/illustrations/2.svg" alt="Thumb">
+                    <img src="{{ asset('frontend') }}/assets/img/illustrations/2.svg" alt="Thumb">
                 </div>
                 <div class="col-md-7 faq-items">
                     <div class="heading">
@@ -331,28 +344,26 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#ac1">
-                                            Do I need a business plan?
+                                            Quels sont les Documents remis au client pour un service ?
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="ac1" class="panel-collapse collapse in">
                                     <div class="panel-body">
                                         <p>
-                                            Removing welcomed civility or hastened is. Justice elderly but perhaps expense
-                                            six her are another passage. Full her ten open fond walk not down.For request
-                                            general express unknown are. journey greatly or garrets. Draw door kept do so
-                                            come on open mean. Estimating stimulated how reasonably precaution diminution
-                                            she simplicity sir but. Questions am sincerity zealously concluded consisted or
-                                            no gentleman it.
+                                            Le client a droit aux documents suivants tout au long du travail :
+                                            Questionnaire, Dévis, proforma, contrat, facture, reçu, un disque contenant
+                                            le code source/noyau du projet, Une fiche de nos différentes prestations,
+                                            une fiche informative du projet.
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="panel panel-default">
+                            {{-- <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#ac2">
-                                            A qoui servent les points sur les travaux ?
+                                            Comment assurez-vous l'intégrité des données clients ?
                                         </a>
                                     </h4>
                                 </div>
@@ -368,25 +379,35 @@
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#ac3">
-                                            Where do I start?
+                                            Quel est votre processus complet de travail ?
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="ac3" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <p>
-                                            Removing welcomed civility or hastened is. Justice elderly but perhaps expense
-                                            six her are another passage. Full her ten open fond walk not down.For request
-                                            general express unknown are. journey greatly or garrets. Draw door kept do so
-                                            come on open mean. Estimating stimulated how reasonably precaution diminution
-                                            she simplicity sir but. Questions am sincerity zealously concluded consisted or
-                                            no gentleman it.
+                                            Nous effectuons nos travaux par étape: <br>
+                                            <b><u>Etape 1:</u></b> Le client remplis un questionnaire informative sur ses
+                                            attentes par rapport au service voulu.
+                                            Après étude du questionnaire, un dévis lui est remis. Suite à un accord avec le
+                                            client, une proforma
+                                            lui est envoyé après vérification et approbation, il est tenu de verser un
+                                            pourcentage du montant total. <br>
+                                            <b><u>Etape 2:</u></b> Début du travail et notification constante sur
+                                            l'évolution du projet afin que le client
+                                            y apporte progressivement des modifications. <br>
+                                            <b><u>Etape 3:</u></b> A la fin du projet, le client s'acquitte de la totalité
+                                            de son paiement.
+                                            Le projet lui est livré avec les documents relatifs tels que la facture,
+                                            un CD contenant le code source/noyau du projet, une fiche de nos différentes
+                                            prestations et
+                                            une fiche informative du projet.
                                         </p>
                                     </div>
                                 </div>
@@ -402,13 +423,13 @@
 
 
     <!-- Start Testimonials Area
-                                        ============================================= -->
+                                                ============================================= -->
     <div class="testimonials-area bg-gray default-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
                     <div class="site-heading text-center">
-                        <h2>Customer Review</h2>
+                        <h2>AVIS DES CLIENTS</h2>
                     </div>
                 </div>
             </div>
@@ -471,60 +492,65 @@
     <!-- End Testimonials Area -->
 
     <!-- Start Blog Area
-                                        ============================================= -->
+                            ============================================= -->
     <div id="blog" class="blog-area default-padding bottom-less">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
                     <div class="site-heading text-center">
-                        <h2>Recent News</h2>
+                        <h2>NOUVELLES RÉCENTES</h2>
                         <p>
-                            Learning day desirous informed expenses material returned six the. She enabled invited exposed
-                            him another. Reasonably conviction solicitude me mr at discretion reasonable. Age out full gate
-                            bed day lose.
+                            Jetez un œil à nos dernières actualités et soyez au courant de nos dernières
+                            histoires. Nous sommes toujours à la recherche de nouvelles façons de vous tenir informé.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="blog-items">
-                    <!-- Single Item -->
-                    <div class="col-md-4 single-item">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="single.html"><img src="assets/img/blog/1.jpg" alt="Thumb"></a>
+                    @foreach ($posts as $post)
+                        <!-- Single Item -->
+                        <div class="col-md-4 single-item">
+                            <div class="item">
+                                <div class="thumb">
+                                    <a href="{{  url('detail/'.Str::slug($post->title).'/'.$post->id) }}"><img
+                                            src="{{ asset('/frontend/assets/img/blog/thumb') . '/' . $post->thumb }}"
+                                            alt="Thumb"></a>
+                                </div>
                             </div>
                             <div class="info">
                                 <div class="content">
                                     <div class="date">
-                                        15 Aug, 2019
+                                        {{ $post->created_at->format('d M, Y') }}
                                     </div>
                                     <h4>
-                                        <a href="single.html">Direct wicket little of talked lasted formed</a>
+                                        <a
+                                            href="{{  url('detail/'.Str::slug($post->title).'/'.$post->id) }}">{{ implode(' ', array_slice(explode(' ', $post->title), 0, 4)) }}...</a>
                                     </h4>
                                     <p>
-                                        Pronounce we attention admitting on assurance of suspicion conveying. That his west
-                                        quit had met till.
+                                        {{ implode(' ', array_slice(explode(' ', $post->detail), 0, 10)) }}...
                                     </p>
-                                    <a href="single.html">Read More <i class="fas fa-angle-right"></i></a>
+                                    <a href="{{  url('detail/'.Str::slug($post->title).'/'.$post->id) }}">Lire Plus <i
+                                            class="fas fa-angle-right"></i></a>
                                 </div>
                                 <div class="meta">
                                     <ul>
                                         <li>
                                             <a href="#">
-                                                <img src="assets/img/team/4.jpg" alt="Author">
-                                                <span>Author</span>
+                                                <img src="{{ asset('frontend') }}/assets/img/team/gounbam.jpg"
+                                                    alt="Author">
+                                                <span>Admin</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
                                                 <i class="fas fa-comments"></i>
-                                                <span>05</span>
+                                                <span>{{ count($post->comments) }}</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <i class="fas fa-share-alt"></i>
+                                                <i class="fas fa-eye"></i>
                                                 <span>37</span>
                                             </a>
                                         </li>
@@ -532,100 +558,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Single Item -->
-                    <!-- Single Item -->
-                    <div class="col-md-4 single-item">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="single.html"><img src="assets/img/blog/2.jpg" alt="Thumb"></a>
-                            </div>
-                            <div class="info">
-                                <div class="content">
-                                    <div class="date">
-                                        27 Nov, 2019
-                                    </div>
-                                    <h4>
-                                        <a href="single.html">Supported neglected met therefore unwilling</a>
-                                    </h4>
-                                    <p>
-                                        Pronounce we attention admitting on assurance of suspicion conveying. That his west
-                                        quit had met till.
-                                    </p>
-                                    <a href="single.html">Read More <i class="fas fa-angle-right"></i></a>
-                                </div>
-                                <div class="meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/team/2.jpg" alt="Author">
-                                                <span>Author</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-comments"></i>
-                                                <span>17</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-share-alt"></i>
-                                                <span>22</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Item -->
-                    <!-- Single Item -->
-                    <div class="col-md-4 single-item">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="single.html"><img src="assets/img/blog/3.jpg" alt="Thumb"></a>
-                            </div>
-                            <div class="info">
-                                <div class="content">
-                                    <div class="date">
-                                        18 Sep, 2019
-                                    </div>
-                                    <h4>
-                                        <a href="single.html">Concerns greatest margaret absolute entrance</a>
-                                    </h4>
-                                    <p>
-                                        Pronounce we attention admitting on assurance of suspicion conveying. That his west
-                                        quit had met till.
-                                    </p>
-                                    <a href="single.html">Read More <i class="fas fa-angle-right"></i></a>
-                                </div>
-                                <div class="meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/team/1.jpg" alt="Author">
-                                                <span>Author</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-comments"></i>
-                                                <span>25</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-share-alt"></i>
-                                                <span>50</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Item -->
+                        <!-- Single Item -->
+                    @endforeach
                 </div>
             </div>
         </div>

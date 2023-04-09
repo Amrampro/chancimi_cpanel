@@ -49,7 +49,7 @@ class SupportController extends Controller
         $save = $support->save();
 
         if ($save)
-            return redirect('user/support')->with('success', 'Message Envoyé');
+            return redirect('user/support')->with('success', 'Message Envoyé!. Nous allons vous repondre dans un bref delais');
         else
             return redirect('user/support')->with('error', 'Message non Envoyé');
     }

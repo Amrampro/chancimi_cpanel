@@ -5,7 +5,7 @@
         <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Mes Points /</span> Utiliser Les Points</h4>
 
         <!-- Sites Web -->
-        <h5 class="pb-1 mb-4">Sites Internet</h5>
+        <h5 class="pb-1 mb-4">Sites web</h5>
         <div class="row mb-5">
             <div class="col-md-6 col-lg-4 mb-3">
                 <div class="card h-100">
@@ -13,7 +13,7 @@
                         <h5 class="card-title">Statique</h5>
                         <h6 class="card-subtitle text-muted">50 points</h6>
                     </div>
-                    <img class="img-fluid" src="{{ asset('userend') }}/img/elements/2.jpg" alt="Card image cap" />
+                    <img class="img-fluid" src="{{ asset('userend') }}/img/points/img_protected.jpg" alt="Card image cap" />
                     <div class="card-body">
                         <p class="card-text">Site vitrine/présentation, meilleur pour les entreprises qui sont dans leur
                             debuts.</p>
@@ -27,7 +27,7 @@
                         <h5 class="card-title">Semi-dynamique</h5>
                         <h6 class="card-subtitle text-muted">65 points</h6>
                     </div>
-                    <img class="img-fluid" src="{{ asset('userend') }}/img/elements/2.jpg" alt="Card image cap" />
+                    <img class="img-fluid" src="{{ asset('userend') }}/img/points/semi-dynamique.jpg" alt="Card image cap" />
                     <div class="card-body">
                         <p class="card-text">Site avec un blog et partie admin. Parfait pour les ONGs,...</p>
                         <a href="javascript:void(0)" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalToggle">Commander</a>
@@ -40,7 +40,7 @@
                         <h5 class="card-title">Dynamique</h5>
                         <h6 class="card-subtitle text-muted">100 points</h6>
                     </div>
-                    <img class="img-fluid" src="{{ asset('userend') }}/img/elements/2.jpg" alt="Card image cap" />
+                    <img class="img-fluid" src="{{ asset('userend') }}/img/points/dynamique.jpg" alt="Card image cap" />
                     <div class="card-body">
                         <p class="card-text">Avec une section utilisateur. Parfait pour les sites de e-commerce,
                             e-learning,...</p>
@@ -66,7 +66,7 @@
         <!-- Logiciels -->
 
         <!-- Graphique -->
-        <h5 class="pb-1 mb-4 mt-5">Médias graphique</h5>
+        <h5 class="pb-1 mb-4 mt-5">Médias graphiques</h5>
         <div class="row mb-5">
             <div class="col-md-6 col-lg-4 mb-3">
                 <div class="card h-100">
@@ -74,7 +74,7 @@
                         <h5 class="card-title">Cartes de visites</h5>
                         <h6 class="card-subtitle text-muted">100 pour 5 points</h6>
                     </div>
-                    <img class="img-fluid" src="{{ asset('userend') }}/img/elements/2.jpg" alt="Card image cap" />
+                    <img class="img-fluid" src="{{ asset('userend') }}/img/points/vcard.jpg" alt="Card image cap" />
                     <div class="card-body">
                         <a href="javascript:void(0)" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalToggle">Commander</a>
                     </div>
@@ -86,7 +86,7 @@
                         <h5 class="card-title">Flyers</h5>
                         <h6 class="card-subtitle text-muted">5 points</h6>
                     </div>
-                    <img class="img-fluid" src="{{ asset('userend') }}/img/elements/2.jpg" alt="Card image cap" />
+                    <img class="img-fluid" src="{{ asset('userend') }}/img/points/flyer.jpg" alt="Card image cap" />
                     <div class="card-body">
                         <a href="javascript:void(0)" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalToggle">Commander</a>
                     </div>
@@ -98,7 +98,7 @@
                         <h5 class="card-title">CVs</h5>
                         <h6 class="card-subtitle text-muted">5 points</h6>
                     </div>
-                    <img class="img-fluid" src="{{ asset('userend') }}/img/elements/2.jpg" alt="Card image cap" />
+                    <img class="img-fluid" src="{{ asset('userend') }}/img/points/cv.jpg" alt="Card image cap" />
                     <div class="card-body">
                         <a href="javascript:void(0)" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalToggle">Commander</a>
                     </div>
@@ -127,6 +127,7 @@
                             </div>
                             <div class="modal-body">
                                 Bientôt disponible ! Contacter nous sur notre page de contact pour ce service. 
+                                <u><a href="{{url('/user/support')}}">Cliquer ici pour aller...</a></u>
                             </div>
                         </div>
                     </div>

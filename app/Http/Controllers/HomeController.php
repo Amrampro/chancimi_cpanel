@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Comment;
+use App\Models\Team;
+use App\Models\Construction;
+use App\Models\Examination;
 
 class HomeController extends Controller
 {
@@ -29,7 +32,34 @@ class HomeController extends Controller
     {
 
         $data = Post::limit(3)->orderBy('id', 'desc')->get();
+        $exams = Examination::all();
+        // $teams = Team::limit(3)->get();
         return view('home', [
+            'data' => $data,
+            'exams' => $exams
+            // 'teams' => $teams
+        ]);
+        // $data = Construction::limit(1)->where('id', '1')->get();
+        // return view('under_construction', [
+        //     'data' => $data
+        // ]);
+        // return view('home');
+    }
+    public function about()
+    {
+
+        $data = Post::limit(3)->orderBy('id', 'desc')->get();
+        $teams = Team::all();
+        return view('about', [
+            'posts' => $data,
+            'teams' => $teams
+        ]);
+    }
+    public function services()
+    {
+
+        $data = Post::limit(3)->orderBy('id', 'desc')->get();
+        return view('services', [
             'posts' => $data
         ]);
     }
@@ -70,12 +100,11 @@ class HomeController extends Controller
             'comment' => 'required'
         ]);
 
-        $data= new Comment;
-        $data->user_id=$request->user()->id;
-        $data->post_id=$id;
-        $data->comment=$request->comment;
+        $data = new Comment;
+        $data->user_id = $request->user()->id;
+        $data->post_id = $id;
+        $data->comment = $request->comment;
         $data->save();
-        return redirect('detail/'.$slug.'/'.$id)->with('success', 'Commentaire ajouté');
-
+        return redirect('detail/' . $slug . '/' . $id)->with('success', 'Commentaire ajouté');
     }
 }

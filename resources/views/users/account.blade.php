@@ -155,7 +155,7 @@
                     </div>
                     <!-- /Account -->
                 </div>
-                <div class="card">
+                {{-- <div class="card">
                     <h5 class="card-header">Supprimer le compte</h5>
                     <div class="card-body">
                         <div class="mb-3 col-12 mb-0">
@@ -178,10 +178,9 @@
                                 title="<span>Action impossible !</span>">
                                 <i class='bx bx-trash bx-xs'></i> Désactivater
                             </button>
-                            {{-- <button type="submit" class="btn btn-danger deactivate-account">Désactivater</button> --}}
                         </form>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
 

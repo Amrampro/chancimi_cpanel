@@ -52,7 +52,7 @@
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="doctor-name">Detail</label>
-                                <textarea class="form-control" value="" name="detail" id="" cols="30" rows="5">{{ $data->detail }}</textarea>
+                                <textarea class="form-control" value="" name="detail" id="mytextarea" cols="30" rows="5">{{ $data->detail }}</textarea>
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="doctor-name">Tags</label>

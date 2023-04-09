@@ -95,12 +95,12 @@
                     </li>
 
                     <!-- Components -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Points</span></li>
+                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Packs</span></li>
                     <!-- Cards -->
-                    <li class="menu-item {{ 'user/my_points' == request()->path() ? 'active' : '' }}">
-                        <a href="{{ url('user/my_points') }}" class="menu-link">
+                    <li class="menu-item {{ 'user/'.auth()->user()->id.'/packs' == request()->path() ? 'active' : '' }}">
+                        <a href="{{ url('user/'.auth()->user()->id.'/packs') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-box"></i>
-                            <div data-i18n="Basic">Mes Points</div>
+                            <div data-i18n="Basic">Mes Packs</div>
                         </a>
                     </li>
                     <li class="menu-item {{ 'user/use_points' == request()->path() ? 'active' : '' }}">
@@ -110,11 +110,23 @@
                         </a>
                     </li>
                     <!-- Components -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Mon Cash</span></li>
+                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Examens</span></li>
+                    <li class="menu-item {{ 'user/tcf_canada' == request()->path() ? 'active' : '' }}">
+                        <a href="{{ url('user/tcf_canada') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-wallet"></i>
+                            <div data-i18n="Basic">TCF Canada</div>
+                        </a>
+                    </li>
                     <li class="menu-item {{ 'user/my_wallet' == request()->path() ? 'active' : '' }}">
                         <a href="{{ url('user/my_wallet') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-wallet"></i>
-                            <div data-i18n="Basic">Mon Portefeuil</div>
+                            <div data-i18n="Basic">TEF</div>
+                        </a>
+                    </li>
+                    <li class="menu-item {{ 'user/my_wallet' == request()->path() ? 'active' : '' }}">
+                        <a href="{{ url('user/my_wallet') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-wallet"></i>
+                            <div data-i18n="Basic">ITLS</div>
                         </a>
                     </li>
 
@@ -156,10 +168,10 @@
 
                     <!-- Misc -->
                     <li class="menu-header small text-uppercase"><span class="menu-header-text">Autres</span></li>
-                    <li class="menu-item">
+                    <li class="menu-item {{ 'user/support' == request()->path() ? 'active' : '' }}">
                         <a href="{{ url('/user/support') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-support"></i>
-                            <div data-i18n="Support">Signaler un problème</div>
+                            <div data-i18n="Support">Contacter l'assistant</div>
                         </a>
                     </li>
                 </ul>
@@ -323,6 +335,9 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="{{ asset('userend') }}/js/buttons.js"></script>
+
+    {{-- For time counter --}}
+    <script async defer src="{{ asset('global') }}/js.js"></script>
 
 </body>
 

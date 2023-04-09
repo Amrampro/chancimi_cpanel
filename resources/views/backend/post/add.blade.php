@@ -53,7 +53,7 @@
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="doctor-name">Detail</label>
-                                <textarea class="form-control" name="detail" id="" cols="30" rows="2"></textarea>
+                                <textarea class="form-control" name="detail" id="mytextarea" cols="30" rows="2"></textarea>
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="doctor-name">Tags</label>

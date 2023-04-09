@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\User;
+use App\Models\Examination_pack;
+use App\Models\Examination;
+use App\Models\Pack_validity;
 
 class UsersController extends Controller
 {
@@ -13,7 +16,7 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
         return view('users/dashboard');
     }
@@ -132,8 +135,15 @@ class UsersController extends Controller
 
     function dashboard()
     {
-        return view('users/dashboard');
-        // return view('maintenance');
+        $id = auth()->user()->id;
+        $vPacks = Pack_validity::where('user_id',$id)->get();
+        $exam_pack = Examination_pack::all();
+        $exams = Examination::all();
+        return view('users.dashboard', [
+            'vPacks' => $vPacks,
+            'ePacks' => $exam_pack,
+            'exams' => $exams,
+        ]);
     }
 
     function maintenance()
@@ -147,5 +157,14 @@ class UsersController extends Controller
 
     function my_points(){
         return view('users/points');
+    }
+    function users(){
+        // $data = User::all();
+        // Order by recent post
+        $data = User::orderBy('id', 'desc')->get();
+        return view('backend.users.index', [
+            'data' => $data
+        ]);
+        // return view('backend/users/index');
     }
 }

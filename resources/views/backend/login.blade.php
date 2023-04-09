@@ -47,7 +47,7 @@
                             @if (Session::has('error'))
                                 <span style="color:red">{{ session('error') }}</span>
                             @endif
-                            <form class="widget-form" method="post">
+                            <form class="widget-form" method="post" action="{{ url('admin/login') }}">
                                 @csrf
                                 <!-- form-group -->
                                 <div class="form-group row">

@@ -10,6 +10,10 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\SupportController;
+use App\Http\Controllers\TeamController;
+use App\Http\Controllers\ExaminationController;
+use App\Http\Controllers\Packs\Pack_validityController;
+use App\Http\Controllers\TcfCanada\TcfCanadaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,17 +27,19 @@ use App\Http\Controllers\SupportController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/services', [HomeController::class, 'services']);
+Route::get('/about', [HomeController::class, 'about']);
 
-Route::get('/about', function () {
-    return view('about');
-});
+// Chosing pack
+Route::get('/pack/{id}/chose', [ExaminationController::class, 'chose_pack']);
+Route::get('/pack/{slug}/{id}/{exam_id}', [ExaminationController::class, 'pack_details']);
 
 Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/services', function () {
-    return view('services');
+Route::get('/boutique', function () {
+    return view('maintenance');
 });
 
 Route::get('/webprice', function () {
@@ -60,21 +66,27 @@ Route::middleware("auth:admin")->group(function(){
     Route::post('/admin/setting', [SettingController::class, 'save_settings']);
     
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
+
     // Categories
     Route::get('/admin/category/{id}/delete', [CategoryController::class, 'destroy']);
     Route::resource('/admin/category', CategoryController::class);
     
+    // Posts
     Route::get('/admin/post/{id}/delete', [PostController::class, 'destroy']);
     Route::resource('/admin/post', PostController::class);
-    
 
+    // Users
+    Route::get('/admin/users', [UsersController::class, 'users']);
+
+    // Teams
+    Route::get('/admin/team/{id}/delete', [TeamController::class, 'destroy']);
+    Route::resource('/admin/team', TeamController::class);
 });
 
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::resource('newsletter', NewsletterController::class);
 
 
 // Users section
@@ -89,4 +101,13 @@ Route::middleware("auth")->group(function(){
 
     Route::resource('/user/settings', UsersController::class);
     Route::resource('/user/support', SupportController::class);
+
+    // Valid Packs
+    Route::get('user/{id}/packs', [Pack_validityController::class, 'user_index']);
+    Route::get('user/tcf_canada', [TcfCanadaController::class, 'user_index']);
+
+    // TCF Canada
+    Route::get('user/tcfc/{session}', [TcfCanadaController::class, 'tcf_session']);
 });
+
+Route::resource('newsletter', NewsletterController::class);

@@ -7,11 +7,11 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
                     <div class="site-heading text-center">
-                        <h2>Site Internet (Application web)</h2>
+                        <h2>Nos Tarifs</h2>
                         <p>
-                            Le meilleur moyen pour une entreprise de se faire connaître est par le biais d'un site Internet.
-                            Il ne s'agit pas seulement d'avoir un bon site web, c'est aussi être visible auprès de votre
-                            public cible !
+                            Le meilleur moyen pour une entreprise de se faire connaître c'est par le biais d'un site web.
+                            Il ne s'agit pas seulement d'avoir un bon site web, mais aussi les techniques adéquates 
+                            pour être retrouvé facilement par les utilisateurs sur les moteurs de recherches.
                         </p>
                     </div>
                 </div>
@@ -54,13 +54,13 @@
                                                     <li><i class="fas fa-check"></i> 4 pages (Max)</li>
                                                     <li><i class="fas fa-times"></i> Base de données</li>
                                                     <li><i class="fas fa-times"></i> Page d'Actualité (Blog page)</li>
-                                                    <li><i class="fas fa-times"></i> Support</li>
-                                                    <li><i class="fas fa-times"></i> Compte admin</li>
+                                                    <li><i class="fas fa-times"></i> Support (Manuel d'utilisation)</li>
+                                                    <li><i class="fas fa-times"></i> Compte administrateur</li>
                                                     <li><i class="fas fa-times"></i> Section utilisateur</li>
-                                                    <li><i class="fas fa-check"></i> Documetation</li>
+                                                    <li><i class="fas fa-check"></i> Documentation</li>
                                                     <li><i class="fas fa-check"></i> Fichier compressé</li>
                                                     <li class="footer">
-                                                        <a class="btn circle btn-theme border btn-sm" href="#">Choisir
+                                                        <a class="btn circle btn-theme border btn-sm" href="https://wa.me/237696896758?text=Plan:%PSS->STAT">Choisir
                                                             ce plan</a>
                                                     </li>
                                                 </ul>
@@ -77,13 +77,13 @@
                                                     <li><i class="fas fa-check"></i> 6 pages +</li>
                                                     <li><i class="fas fa-check"></i> Base de données</li>
                                                     <li><i class="fas fa-check"></i> Page d'Actualité (Blog page)</li>
-                                                    <li><i class="fas fa-times"></i> Support</li>
-                                                    <li><i class="fas fa-check"></i> Compte admin</li>
+                                                    <li><i class="fas fa-times"></i> Support (Manuel d'utilisation)</li>
+                                                    <li><i class="fas fa-check"></i> Compte administrateur</li>
                                                     <li><i class="fas fa-times"></i> Section utilisateur</li>
-                                                    <li><i class="fas fa-check"></i> Documetation</li>
+                                                    <li><i class="fas fa-check"></i> Documentation</li>
                                                     <li><i class="fas fa-check"></i> Fichier compressé</li>
                                                     <li class="footer">
-                                                        <a class="btn circle btn-theme effect btn-sm" href="#">Choisir
+                                                        <a class="btn circle btn-theme effect btn-sm" href="https://wa.me/237696896758?text=Plan:%PSS->STAND">Choisir
                                                             ce plan</a>
                                                     </li>
                                                 </ul>
@@ -100,13 +100,13 @@
                                                     <li><i class="fas fa-check"></i> 6 pages +</li>
                                                     <li><i class="fas fa-check"></i> Base de données</li>
                                                     <li><i class="fas fa-check"></i> Page d'Actualité (Blog page)</li>
-                                                    <li><i class="fas fa-check"></i> Support</li>
-                                                    <li><i class="fas fa-check"></i> Compte admin</li>
+                                                    <li><i class="fas fa-check"></i> Support (Manuel d'utilisation)</li>
+                                                    <li><i class="fas fa-check"></i> Compte administrateur</li>
                                                     <li><i class="fas fa-check"></i> Section utilisateur</li>
-                                                    <li><i class="fas fa-check"></i> Documetation</li>
+                                                    <li><i class="fas fa-check"></i> Documentation</li>
                                                     <li><i class="fas fa-check"></i> Fichier compressé</li>
                                                     <li class="footer">
-                                                        <a class="btn circle btn-theme border btn-sm" href="#">Choisir
+                                                        <a class="btn circle btn-theme border btn-sm" href="https://wa.me/237696896758?text=Plan:%PSS->AVAN">Choisir
                                                             ce plan</a>
                                                     </li>
                                                 </ul>
@@ -125,17 +125,17 @@
                                             <div class="pricing-item">
                                                 <ul>
                                                     <li class="pricing-header">
-                                                        <h4>Basique</h4>
-                                                        <h2><sup>XAF</sup>5.500</h2>
+                                                        <h4>Statique</h4>
+                                                        <h2><sup>XAF</sup>6.000</h2>
                                                         <span>/Mois</span>
                                                     </li>
                                                     <li><i class="fas fa-check"></i> 4 pages (Max)</li>
                                                     <li><i class="fas fa-check"></i> Maintenance</li>
                                                     <li><i class="fas fa-check"></i> Mise à jour</li>
-                                                    <li><i class="fas fa-check"></i> Support</li>
-                                                    <li><i class="fas fa-check"></i> Documetation</li>
+                                                    <li><i class="fas fa-check"></i> Support (Manuel d'utilisation)</li>
+                                                    <li><i class="fas fa-check"></i> Documentation</li>
                                                     <li><i class="fas fa-times"></i> Page d'Actualité (Blog page)</li>
-                                                    <li><i class="fas fa-times"></i> Compte admin</li>
+                                                    <li><i class="fas fa-times"></i> Compte administrateur</li>
                                                     <li><i class="fas fa-times"></i> Section utilisateur</li>
                                                     <li>
                                                         <h2><sup>Bonus</sup></h2>
@@ -144,7 +144,7 @@
                                                     <li><i class="fas fa-times"></i> Flyer</li>
                                                     <li><i class="fas fa-times"></i> Publicité sur Facebook</li>
                                                     <li class="footer">
-                                                        <a class="btn circle btn-theme border btn-sm" href="#">Choisir
+                                                        <a class="btn circle btn-theme border btn-sm" href="https://wa.me/237696896758?text=Plan:%PSC->BASE">Choisir
                                                             ce plan</a>
                                                     </li>
                                                 </ul>
@@ -155,16 +155,16 @@
                                                 <ul>
                                                     <li class="pricing-header">
                                                         <h4>Standard</h4>
-                                                        <h2><sup>XAF</sup>8.500+</h2>
+                                                        <h2><sup>XAF</sup>8.000+</h2>
                                                         <span>/Mois</span>
                                                     </li>
                                                     <li><i class="fas fa-check"></i> 6 pages +</li>
                                                     <li><i class="fas fa-check"></i> Maintenance</li>
                                                     <li><i class="fas fa-check"></i> Mise à jour</li>
-                                                    <li><i class="fas fa-check"></i> Support</li>
-                                                    <li><i class="fas fa-check"></i> Documetation</li>
+                                                    <li><i class="fas fa-check"></i> Support (Manuel d'utilisation)</li>
+                                                    <li><i class="fas fa-check"></i> Documentation</li>
                                                     <li><i class="fas fa-check"></i> Page d'Actualité (Blog page)</li>
-                                                    <li><i class="fas fa-check"></i> Compte admin</li>
+                                                    <li><i class="fas fa-check"></i> Compte administrateur</li>
                                                     <li><i class="fas fa-times"></i> Section utilisateur</li>
                                                     <li>
                                                         <h2><sup>Bonus</sup></h2>
@@ -174,7 +174,7 @@
                                                     <li><i class="fas fa-times"></i> Publicité sur Facebook</li>
                                                     <li class="footer">
                                                         <a class="btn circle btn-theme border btn-sm"
-                                                            href="#">Choisir ce plan</a>
+                                                            href="https://wa.me/237696896758?text=Plan:%PSC->STAN">Choisir ce plan</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -184,16 +184,16 @@
                                                 <ul>
                                                     <li class="pricing-header">
                                                         <h4>Avancé</h4>
-                                                        <h2><sup>XAF</sup>12.500</h2>
+                                                        <h2><sup>XAF</sup>12.000+</h2>
                                                         <span>/Mois</span>
                                                     </li>
                                                     <li><i class="fas fa-check"></i> 6 pages +</li>
                                                     <li><i class="fas fa-check"></i> Maintenance</li>
                                                     <li><i class="fas fa-check"></i> Mise à jour</li>
-                                                    <li><i class="fas fa-check"></i> Support</li>
-                                                    <li><i class="fas fa-check"></i> Documetation</li>
+                                                    <li><i class="fas fa-check"></i> Support (Manuel d'utilisation)</li>
+                                                    <li><i class="fas fa-check"></i> Documentation</li>
                                                     <li><i class="fas fa-check"></i> Page d'Actualité (Blog page)</li>
-                                                    <li><i class="fas fa-check"></i> Compte admin</li>
+                                                    <li><i class="fas fa-check"></i> Compte administrateur</li>
                                                     <li><i class="fas fa-check"></i> Section utilisateur</li>
                                                     <li>
                                                         <h2><sup>Bonus</sup></h2>
@@ -203,7 +203,7 @@
                                                     <li><i class="fas fa-check"></i> Publicité sur Facebook</li>
                                                     <li class="footer">
                                                         <a class="btn circle btn-theme border btn-sm"
-                                                            href="#">Choisir ce plan</a>
+                                                            href="https://wa.me/237696896758?text=Plan:%PSC->AVAN">Choisir ce plan</a>
                                                     </li>
                                                 </ul>
                                             </div>

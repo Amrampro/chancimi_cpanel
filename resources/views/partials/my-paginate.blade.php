@@ -1,30 +1,15 @@
-{{-- <div class="col-lg-12 col-md-12 pagi-area">
-    <nav aria-label="navigation">
-        <ul class="pagination">
-            <li><a href="#">Previous</a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">Next</a></li>
-        </ul>
-    </nav>
-</div> --}}
-{{-- This is the line to install customable pagination in your laravel project --}}
-{{-- php artisan vendor:publish --tag=laravel-pagination --}}
 @if ($paginator->hasPages())
-    <div class="col-lg-12 col-md-12 pagi-area">
-        <nav aria-label="navigation">
-            <ul class="pagination">
+<div class="row">
+    <div class="col-lg-12 mt--60">
+        <nav>
+            <ul class="edu-pagination">
                 {{-- Previous Page Link --}}
                 @if ($paginator->onFirstPage())
-                    {{-- <li class="disabled" aria-disabled="true">
-                        <span aria-hidden="true">&lsaquo; Previous</span>
-                    </li> --}}
-                    <li class="disabled" aria-disabled="true"><a style="pointer-events: none;" href="#">&lsaquo; Previous</a></li>
+                <li><a href="#" style="pointer-events: none;"><i class="ri-arrow-drop-left-line"></i></a></li>
                 @else
-                    <li><a href="{{ $paginator->previousPageUrl() }}">&lsaquo; Previous</a></li>
+                <li><a href="{{ $paginator->previousPageUrl() }}"><i class="ri-arrow-drop-left-line"></i></a></li>
                 @endif
-                {{-- Pagination Elements --}}
+                {{-- - -Pages numbers- - --}}
                 @foreach ($elements as $element)
                     {{-- "Three Dots" Separator --}}
                     @if (is_string($element))
@@ -35,25 +20,24 @@
                     @if (is_array($element))
                         @foreach ($element as $page => $url)
                             @if ($page == $paginator->currentPage())
-                                {{-- <li class="active" aria-current="page"><span>{{ $page }}</span></li> --}}
-                                <li class="active"><a style="pointer-events: none;" href="#">{{ $page }}</a></li>
+                                <li class="active"><a href="#" style="pointer-events: none;">{{ $page }}</a></li>
                             @else
                                 <li><a href="{{ $url }}">{{ $page }}</a></li>
                             @endif
                         @endforeach
                     @endif
                 @endforeach
-
                 {{-- Next Page Link --}}
                 @if ($paginator->hasMorePages())
-                    <li><a href="{{ $paginator->nextPageUrl() }}">Next &rsaquo;</a></li>
+                <li><a href="{{ $paginator->nextPageUrl() }}"><i class="ri-arrow-drop-right-line"></i></a></li>
                 @else
-                    {{-- <li class="disabled" aria-disabled="true" aria-label="@lang('pagination.next')">
-                        <span aria-hidden="true">Next &rsaquo;</span>
-                    </li> --}}
-                    <li class="disabled" aria-disabled="true"><a style="pointer-events: none;" href="#">Next &rsaquo;</a></li>
+                    <li><a href="#" style="pointer-events: none;"><i class="ri-arrow-drop-right-line"></i></a></li>
                 @endif
             </ul>
         </nav>
     </div>
+</div>
 @endif
+
+{{-- This is the line to install customable pagination in your laravel project --}}
+{{-- php artisan vendor:publish --tag=laravel-pagination --}}

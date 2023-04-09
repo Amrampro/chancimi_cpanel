@@ -25,7 +25,11 @@ class AdminController extends Controller
 
         // Check user
         $auth = Auth::guard("admin")->attempt(["username"=>$request->username,"password"=>$request->password]);
-       
+        
+        // $2y$10$T8FScH8lCxZj5E3EZRG5IO.NzClDg.o.77vMroP4X2Uo9wXptYHRq => 12345678
+    //     echo('"'.$request->username . '" "' . $request->password.'" :'.$auth);
+    //    dd($auth);
+
         if($auth){
             return redirect('admin/dashboard');
         } else {

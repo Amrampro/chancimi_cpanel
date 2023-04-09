@@ -2,14 +2,14 @@
 <html>
 
 @php
-    $admin = auth("admin")->user();
+    $admin = auth('admin')->user();
 @endphp
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>@yield('title','Administration')</title>
+    <title>@yield('title', 'Administration')</title>
     <!-- Fav  Icon Link -->
     <link rel="shortcut icon" type="image/png" href="{{ asset('backend') }}/images/fav.png">
     <!-- Bootstrap core CSS -->
@@ -26,8 +26,28 @@
     <link rel="stylesheet" href="{{ asset('backend') }}/charts/css/morris.css">
     <!-- jvectormap -->
     <link rel="stylesheet" href="{{ asset('backend') }}/css/jquery-jvectormap.css">
+    <link rel="stylesheet" href="{{ asset('backend') }}/datatable/dataTables.bootstrap4.min.css">
 
     <script src="{{ asset('backend') }}/{{ asset('backend') }}/js/modernizr.min.js"></script>
+
+    {{-- For tiny css --}}
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+        tinymce.init({
+            selector: '#mytextarea',
+            plugins: [
+                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
+                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
+                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help',
+                'wordcount'
+            ],
+            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+                'alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+        });
+    </script>
+    {{-- End for tiny css --}}
 </head>
 
 <body>
@@ -70,10 +90,10 @@
                     </a>
                     <ul class="collapse list-unstyled" id="nav-patients">
                         <li>
-                            <a href="{{url('admin/category')}}">View Categories</a>
+                            <a href="{{ url('admin/category') }}">View Categories</a>
                         </li>
                         <li>
-                            <a href="{{url('admin/category/create')}}">Add Categoriy</a>
+                            <a href="{{ url('admin/category/create') }}">Add Categoriy</a>
                         </li>
                     </ul>
                 </li>
@@ -83,10 +103,10 @@
                     </a>
                     <ul class="collapse list-unstyled" id="nav-doctors">
                         <li>
-                            <a href="{{url('admin/post/create')}}">Add Post</a>
+                            <a href="{{ url('admin/post/create') }}">Add Post</a>
                         </li>
                         <li>
-                            <a href="{{url('admin/post')}}">All Posts</a>
+                            <a href="{{ url('admin/post') }}">All Posts</a>
                         </li>
                     </ul>
                 </li>
@@ -126,8 +146,18 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="{{url('admin/setting')}}">
+                    <a href="{{ url('admin/setting') }}">
                         <span class="ti-key"></span> Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('admin/team') }}">
+                        <span class="ti-key"></span> Team
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('admin/users') }}">
+                        <span class="ti-key"></span> Users
                     </a>
                 </li>
             </ul>
@@ -199,9 +229,9 @@
                             </a>
                             <div class="dropdown-menu proclinic-box-shadow2 profile animated flipInY">
                                 <h5>{{ auth('admin')->user()->username }}</h5>
-                                <a class="dropdown-item" href="{{url('admin/setting')}}">
-									<span class="ti-settings"></span> Settings</a>
-                                <a class="dropdown-item" href="{{url('admin/logout')}}">
+                                <a class="dropdown-item" href="{{ url('admin/setting') }}">
+                                    <span class="ti-settings"></span> Settings</a>
+                                <a class="dropdown-item" href="{{ url('admin/logout') }}">
                                     <span class="ti-power-off"></span> Logout</a>
                             </div>
                         </li>
@@ -253,9 +283,12 @@
     <script src="{{ asset('backend') }}/charts/js/raphael-min.js"></script>
     <script src="{{ asset('backend') }}/charts/js/morris.min.js"></script>
     <script src="{{ asset('backend') }}/js/custom-morris.js"></script>
-
+    <!-- Datatable  -->
+    <script src="{{ asset('backend') }}/datatable/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('backend') }}/datatable/dataTables.bootstrap4.min.js"></script>
     <!-- Custom Script-->
     <script src="{{ asset('backend') }}/js/custom.js"></script>
+    <script src="{{ asset('backend') }}/js/custom-datatables.js"></script>
 </body>
 
 
