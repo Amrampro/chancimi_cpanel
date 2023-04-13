@@ -9,25 +9,10 @@
                         <div class="col-sm-7">
                             <div class="card-body">
                                 <h5 class="card-title text-primary">Pack
-                                    @foreach ($ePacks as $epack)
-                                        @if ($epack->id == $vpack->examination_pack_id)
-                                            {{ $epack->type }}
-                                        @endif
-                                    @endforeach
-                                    du TCF 🎉
+                                    {{$exam_pack->type}}
+                                    du {{$examination->name}} 🎉
                                 </h5>
                                 <p>Votre pack est valide jusqu'au : <i><u>{{ $vpack->end_date }}</u></i>
-                                    {{-- @foreach ($vPacks as $index => $vpack)
-                                        @foreach ($ePacks as $epack)
-                                            @if ($epack->id == $vpack->examination_pack_id)
-                                                @foreach ($exams as $exam)
-                                                    @if ($exam->id == $epack->exam_id)
-                                                        {{ $exam->name }}
-                                                    @endif
-                                                @endforeach
-                                            @endif
-                                        @endforeach
-                                    @endforeach --}}
                                 </p>
                                 <input type="hidden" id="date" value="{{ $vpack->end_date }}">
                                 <p>Ce pack expire dans : <span class="fw-bold text-danger">

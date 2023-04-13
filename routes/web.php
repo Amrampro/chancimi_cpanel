@@ -14,6 +14,9 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\ExaminationController;
 use App\Http\Controllers\Packs\Pack_validityController;
 use App\Http\Controllers\TcfCanada\TcfCanadaController;
+use App\Http\Controllers\TcfCanada\Tcf_canada_ceController;
+use App\Http\Controllers\TcfCanada\Tcf_canada_coController;
+use App\Http\Controllers\TcfCanada\Tcf_canada_eeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -108,6 +111,10 @@ Route::middleware("auth")->group(function(){
 
     // TCF Canada
     Route::get('user/tcfc/{session}', [TcfCanadaController::class, 'tcf_session']);
+    Route::get('user/tcfc/{session}/write', [TcfCanadaController::class, 'write']);
+    Route::post('/user/tcfc_ce/{tcfc_id}/correct/{exam_id}', [Tcf_canada_ceController::class, 'submit_test']);
+    Route::post('/user/tcfc_co/{tcfc_id}/correct/{exam_id}', [Tcf_canada_coController::class, 'submit_test']);
+    Route::post('/user/tcfc_ee/{tcfc_id}/correct/{exam_id}', [Tcf_canada_eeController::class, 'submit_test']);
 });
 
 Route::resource('newsletter', NewsletterController::class);
