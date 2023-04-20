@@ -13,6 +13,7 @@ use App\Http\Controllers\SupportController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\ExaminationController;
 use App\Http\Controllers\Packs\Pack_validityController;
+use App\Http\Controllers\Packs\Examination_packController;
 use App\Http\Controllers\TcfCanada\TcfCanadaController;
 use App\Http\Controllers\TcfCanada\Tcf_canada_ceController;
 use App\Http\Controllers\TcfCanada\Tcf_canada_coController;
@@ -30,8 +31,11 @@ use App\Http\Controllers\TcfCanada\Tcf_canada_eeController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/by_dev', [HomeController::class, 'dev']);
 Route::get('/services', [HomeController::class, 'services']);
 Route::get('/about', [HomeController::class, 'about']);
+
+Route::resource('newsletter', NewsletterController::class);
 
 // Chosing pack
 Route::get('/pack/{id}/chose', [ExaminationController::class, 'chose_pack']);
@@ -98,7 +102,7 @@ Route::middleware("auth")->group(function(){
     // Route::get('/user/settings', [UsersController::class, 'account']);
     Route::get('/user/connexions', [UsersController::class, 'maintenance']);
     Route::get('/user/use_points', [UsersController::class, 'use_points']);
-    Route::get('/user/my_points', [UsersController::class, 'my_points']);
+    // Route::get('/user/my_points', [UsersController::class, 'my_points']);
     Route::get('/user/my_wallet', [UsersController::class, 'maintenance']);
     Route::get('user/notifications', [UsersController::class, 'maintenance']);
 
@@ -115,6 +119,23 @@ Route::middleware("auth")->group(function(){
     Route::post('/user/tcfc_ce/{tcfc_id}/correct/{exam_id}', [Tcf_canada_ceController::class, 'submit_test']);
     Route::post('/user/tcfc_co/{tcfc_id}/correct/{exam_id}', [Tcf_canada_coController::class, 'submit_test']);
     Route::post('/user/tcfc_ee/{tcfc_id}/correct/{exam_id}', [Tcf_canada_eeController::class, 'submit_test']);
+
+    // *****************************************************
+    // *  ALl these are the routes of the content manager  *
+    // *****************************************************
+
+    // Packs
+    Route::get('user/emp/cm/packs', [Examination_packController::class, 'index']);
+    Route::get('/user/emp/cm/packs/{id}/delete', [Examination_packController::class, 'destroy']);
+    Route::resource('user/emp/cm/packs', Examination_packController::class);
+
+    // TCF_Canada
+    Route::get('user/emp/cm/tcfcanada', [TcfCanadaController::class, 'cm_index']);
+    Route::get('user/emp/cm/{id}/tcfcanada', [TcfCanadaController::class, 'cm_index_see']);
+
+    // TCF_Canada CE
+    Route::get('user/emp/cm/tcfc_ce/{id}/add', [Tcf_canada_ceController::class, 'custom_create']);
+    Route::post('user/emp/cm/tcfc_ce/{id}/addq', [Tcf_canada_ceController::class, 'custom_store']);
 });
 
-Route::resource('newsletter', NewsletterController::class);
+// Content Manager section

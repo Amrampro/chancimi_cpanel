@@ -60,6 +60,29 @@
     <!-- Custom notification for demo -->
     <!-- beautify ignore:end -->
 
+        {{-- For tiny css --}}
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+        <script>
+            tinymce.init({
+                selector: '#mytextarea',
+                plugins: [
+                    'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
+                    'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
+                    'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help',
+                    'wordcount'
+                ],
+                toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+                    'alignleft aligncenter alignright alignjustify | ' +
+                    'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+            });
+        </script>
+        {{-- End for tiny css --}}
+
+    <?php
+    $emp_session = session()->get('employee');
+    // die($emp_session);
+    ?>
 </head>
 
 <body>
@@ -93,42 +116,62 @@
                             <div data-i18n="Analytics">Dashboard</div>
                         </a>
                     </li>
-
-                    <!-- Components -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Packs</span></li>
-                    <!-- Cards -->
-                    <li class="menu-item {{ 'user/'.auth()->user()->id.'/packs' == request()->path() ? 'active' : '' }}">
-                        <a href="{{ url('user/'.auth()->user()->id.'/packs') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-box"></i>
-                            <div data-i18n="Basic">Mes Packs</div>
-                        </a>
-                    </li>
-                    <li class="menu-item {{ 'user/use_points' == request()->path() ? 'active' : '' }}">
-                        <a href="{{ url('user/use_points') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Utiliser Mes Points</div>
-                        </a>
-                    </li>
-                    <!-- Components -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Examens</span></li>
-                    <li class="menu-item {{ 'user/tcf_canada' == request()->path() ? 'active' : '' }}">
-                        <a href="{{ url('user/tcf_canada') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-wallet"></i>
-                            <div data-i18n="Basic">TCF Canada</div>
-                        </a>
-                    </li>
-                    <li class="menu-item {{ 'user/my_wallet' == request()->path() ? 'active' : '' }}">
-                        <a href="{{ url('user/my_wallet') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-wallet"></i>
-                            <div data-i18n="Basic">TEF</div>
-                        </a>
-                    </li>
-                    <li class="menu-item {{ 'user/my_wallet' == request()->path() ? 'active' : '' }}">
-                        <a href="{{ url('user/my_wallet') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-wallet"></i>
-                            <div data-i18n="Basic">ITLS</div>
-                        </a>
-                    </li>
+                    @if ($emp_session == 'chancontentm')
+                        <!-- Components -->
+                        <li class="menu-header small text-uppercase"><span class="menu-header-text">Packs</span></li>
+                        <li class="menu-item {{ 'user/emp/cm/packs' == request()->path() ? 'active' : '' }}">
+                            <a href="{{ url('user/emp/cm/packs') }}" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-collection"></i>
+                                <div data-i18n="Basic">Packs</div>
+                            </a>
+                        </li>
+                        <!-- Components -->
+                        <li class="menu-header small text-uppercase"><span class="menu-header-text">TCF Canada</span></li>
+                        <li class="menu-item {{ 'user/emp/cm/tcfcanada' == request()->path() ? 'active' : '' }}">
+                            <a href="{{ url('user/emp/cm/tcfcanada') }}" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-collection"></i>
+                                <div data-i18n="Basic">TCF Canada</div>
+                            </a>
+                        </li>
+                    @endif
+                    @if ($emp_session == null)
+                        <!-- Components -->
+                        <li class="menu-header small text-uppercase"><span class="menu-header-text">Packs</span></li>
+                        <!-- Cards -->
+                        <li
+                            class="menu-item {{ 'user/' . auth()->user()->id . '/packs' == request()->path() ? 'active' : '' }}">
+                            <a href="{{ url('user/' . auth()->user()->id . '/packs') }}" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-box"></i>
+                                <div data-i18n="Basic">Mes Packs</div>
+                            </a>
+                        </li>
+                        <li class="menu-item {{ 'user/use_points' == request()->path() ? 'active' : '' }}">
+                            <a href="{{ url('user/use_points') }}" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-collection"></i>
+                                <div data-i18n="Basic">Utiliser Mes Points</div>
+                            </a>
+                        </li>
+                        <!-- Components -->
+                        <li class="menu-header small text-uppercase"><span class="menu-header-text">Examens</span></li>
+                        <li class="menu-item {{ 'user/tcf_canada' == request()->path() ? 'active' : '' }}">
+                            <a href="{{ url('user/tcf_canada') }}" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-wallet"></i>
+                                <div data-i18n="Basic">TCF Canada</div>
+                            </a>
+                        </li>
+                        <li class="menu-item {{ 'user/my_wallet' == request()->path() ? 'active' : '' }}">
+                            <a href="{{ url('user/my_wallet') }}" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-wallet"></i>
+                                <div data-i18n="Basic">TEF</div>
+                            </a>
+                        </li>
+                        <li class="menu-item {{ 'user/my_wallet' == request()->path() ? 'active' : '' }}">
+                            <a href="{{ url('user/my_wallet') }}" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-wallet"></i>
+                                <div data-i18n="Basic">ITLS</div>
+                            </a>
+                        </li>
+                    @endif
 
                     <!-- Layouts -->
 

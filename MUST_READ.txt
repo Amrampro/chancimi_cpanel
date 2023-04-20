@@ -1,0 +1,27 @@
+************************************************************************************************
+*                THIS FILE MUST BE READ BEFORE UPLOADING THIS PROJECT ON CPANEL                *
+************************************************************************************************
+
+++++++++++++++++++
++ For developper +
+++++++++++++++++++
+
+The developper must respect this instructions for the code to work properly
+
+
+--------------
+Table: roles |
+--------------
+
+1) On table->"roles", The first element with id "1" Must be "TEACHER"
+2) On table->"roles", the second element with id "2" Must be "CONTENT MANAGER"
+
+-------------------------------------------------------
+|     id     |       name       |       details       |
+-------------------------------------------------------
+|     1      |       Teacher    |       ---           |
+-------------------------------------------------------
+|     2      |  Content Manager |       ---           |
+-------------------------------------------------------
+|     3      |         -        |        -            |
+-------------------------------------------------------

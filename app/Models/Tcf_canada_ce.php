@@ -9,8 +9,10 @@ class Tcf_canada_ce extends Model
 {
     use HasFactory;
 
-    protected $fillabe = [
-        // if error, remove the property name
-        'tcf_canadas_id','name'
+    protected $fillable = [
+        'tcf_canadas_id',
+        'question_number',
+        'question',
+        'answer'
     ];
 }

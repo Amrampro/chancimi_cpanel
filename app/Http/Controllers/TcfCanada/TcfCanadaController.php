@@ -23,7 +23,29 @@ class TcfCanadaController extends Controller
      */
     public function index()
     {
-        //
+        
+    }
+
+    public function cm_index_see($id){
+        
+        $tcfc = Tcf_canada::find($id);
+        $tcfc_ces = Tcf_canada_ce::where('tcf_canadas_id', $id)->get();
+        $tcfc_cos = Tcf_canada_co::where('tcf_canadas_id', $id)->get();
+        $tcfc_ees = Tcf_canada_ee::where('tcf_canadas_id', $id)->get();
+        return view('users.contentm.tcfcanada.tcf_canada_session', [
+            'tcfc' => $tcfc,
+            'tcfc_ces' => $tcfc_ces,
+            'tcfc_cos' => $tcfc_cos,
+            'tcfc_ees' => $tcfc_ees
+        ]);
+    }
+
+    public function cm_index()
+    {
+        $tcfcs = Tcf_canada::all();
+        return view('users.contentm.tcfcanada.tcf_canada', [
+            'tcfcs' => $tcfcs
+        ]);
     }
 
     public function user_index()

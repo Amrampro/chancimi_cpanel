@@ -1,8 +1,7 @@
 <?php
-foreach ($data as $d) {
-    $date = $d->end_date;
-}
-// $date = '2023-04-04 23:39:00';
+    $date = $data->end_date;
+    // die($data->end_date);
+// $date = '2023-05-04 23:39:00';
 ?>
 <!DOCTYPE html>
 <html lang="fr">

@@ -10,7 +10,7 @@
                             <span class="pre-title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                                 Chancimi Travel Agency</span>
                             <h1 class="title" data-sal-delay="200" data-sal="slide-up" data-sal-duration="800">
-                                Procedue Canadienne facile et Rapide
+                                Procedure Canadienne facile et Rapide
                             </h1>
                             <p class="description" data-sal-delay="250" data-sal="slide-up" data-sal-duration="800">
                                 Nous vous fournissons tout le nessessaire: cours, epreuve, service

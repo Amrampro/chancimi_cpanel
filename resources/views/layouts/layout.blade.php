@@ -44,12 +44,12 @@
                         <nav class="mainmenu-nav d-none d-lg-block">
                             <ul class="mainmenu">
                                 <li><a href="{{ url('/') }}">Accueil</a></li>
-                                <li><a href="about-us-1.html">A propos</a></li>
+                                <li><a href="#">A propos</a></li>
                                 <li class="has-droupdown"><a href="#">Services</a>
                                     <ul class="submenu">
                                         {{-- <li><a href="course-style-1.html">Nos services</a></li> --}}
-                                        <li><a href="course-style-2.html">Cours</a></li>
-                                        <li><a href="course-style-3.html">Epreuves</a></li>
+                                        <li><a href="#">Cours</a></li>
+                                        <li><a href="#">Epreuves</a></li>
                                         <li><a href="shop.html">Boutique</a></li>
                                     </ul>
                                 </li>
@@ -70,7 +70,8 @@
                                         <a class="edu-btn btn-medium left-icon header-button" href="{{ url('/login') }}">
                                             <i class="ri-user-line"></i>Connexion</a>
                                     @else
-                                        <a class="edu-btn btn-medium left-icon header-button" href="{{ url('/user/dashboard') }}">
+                                        <a class="edu-btn btn-medium left-icon header-button"
+                                            href="{{ url('/user/dashboard') }}">
                                             <i class="ri-user-line"></i>Mon Compte</a>
                                     @endguest
 
@@ -223,7 +224,7 @@
             </div>
             <div class="inner">
                 <form class="search-form" action="#">
-                    <input type="text" class="eduvibe-search-popup-field" placeholder="Search Here...">
+                    <input type="text" class="eduvibe-search-popup-field" placeholder="Rechercher Ici...">
                     <button class="submit-button"><i class="icon-search-line"></i></button>
                 </form>
             </div>
@@ -276,6 +277,8 @@
                                         <li><a href="testimonial.html"><i
                                                     class="icon-Double-arrow"></i>Testimonial</a></li>
                                         <li><a href="privacy-policy.html"><i class="icon-Double-arrow"></i>Privacy
+                                                Policy</a></li>
+                                        <li><a href="{{url('employee/')}}"><i class="icon-Double-arrow"></i>Privacy
                                                 Policy</a></li>
                                     </ul>
                                 </div>

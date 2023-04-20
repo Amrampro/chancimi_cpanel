@@ -31,19 +31,42 @@ class HomeController extends Controller
     public function index()
     {
 
+        
+
+        $construction = Construction::limit(1)->first();
+        // Teste si il existe une donnée dans la table de Construction dans la BD
+        if ($construction != null) {
+            // Oui il existe une donnée
+            if ($construction->status == 1) {
+                return view('under_construction', [
+                    'data' => $construction
+                ]);
+            }
+        } else {
+            // Non aucune donnée alors on crée une
+            $build = Construction::create([
+                'status' => 0,
+                'end_date' => '01-01-2023 00:00:00'
+            ]);
+        }
+
         $data = Post::limit(3)->orderBy('id', 'desc')->get();
         $exams = Examination::all();
-        // $teams = Team::limit(3)->get();
+        return view('home', [
+            'data' => $data,
+            'exams' => $exams,
+            'construction' => $construction
+            // 'teams' => $teams
+        ]);
+    }
+    public function dev(){
+        $data = Post::limit(3)->orderBy('id', 'desc')->get();
+        $exams = Examination::all();
         return view('home', [
             'data' => $data,
             'exams' => $exams
             // 'teams' => $teams
         ]);
-        // $data = Construction::limit(1)->where('id', '1')->get();
-        // return view('under_construction', [
-        //     'data' => $data
-        // ]);
-        // return view('home');
     }
     public function about()
     {

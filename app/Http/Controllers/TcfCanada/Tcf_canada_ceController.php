@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Tcf_canada_ce;
 use App\Models\Tcf_canada_exam;
+use App\Models\Tcf_canada;
 
 class Tcf_canada_ceController extends Controller
 {
@@ -27,7 +28,48 @@ class Tcf_canada_ceController extends Controller
      */
     public function create()
     {
-        //
+        // return view('users.contentm.tcfcanada.tcfc_ce_add');
+    }
+
+    public function custom_create($id)
+    {
+        $tcfc = Tcf_canada::find($id);
+        return view('users.contentm.tcfcanada.tcfc_ce_add', [
+            'tcfc' => $tcfc
+        ]);
+    }
+
+    public function custom_store(Request $request, $id)
+    {
+        $tcfc = Tcf_canada::find($id);
+        for ($i = 1; $i <= 3; $i++) {
+            // Question numner
+            $nbr = 'q' . $i;
+            $nbrq = $request->$nbr;
+            // Question
+            $ques = 'question' . $i;
+            $quest = $request->$ques;
+            // Answer
+            $ans = 'answer' . $i;
+            $answ = $request->$ans;
+
+            $request->validate([
+                $nbr => 'required',
+                $ques => 'required',
+                $ans => 'required',
+            ]);
+
+            $upload = Tcf_canada_ce::create([
+                'tcf_canadas_id' => $id,
+                'question_number' => $nbrq,
+                'question' => $quest,
+                'answer' => $answ
+            ]);
+
+            echo $nbrq . '->' . $quest . '->' . $answ . '<br>';
+        }
+        Continue
+        return redirect()->route('user/emp/cm/' . $id . '/tcfcanada');
     }
 
     /**
