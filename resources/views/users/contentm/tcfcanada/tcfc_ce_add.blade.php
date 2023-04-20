@@ -29,7 +29,7 @@
                         <form action="{{ url('user/emp/cm/tcfc_ce/'.$tcfc->id.'/addq') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <input type="hidden" name="tcfc_id" value="{{ $tcfc->id }}">
-                            @for ($i = 1; $i <= 3; $i++)
+                            @for ($i = 1; $i <= 39; $i++)
                                 <input type="hidden" name="q{{ $i }}" value="q{{ $i }}">
                                 <div class="mb-3 col-md-12">
                                     <label for="details" class="form-label">Question {{ $i }}</label>

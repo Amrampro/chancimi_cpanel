@@ -42,7 +42,7 @@ class Tcf_canada_ceController extends Controller
     public function custom_store(Request $request, $id)
     {
         $tcfc = Tcf_canada::find($id);
-        for ($i = 1; $i <= 3; $i++) {
+        for ($i = 1; $i <= 39; $i++) {
             // Question numner
             $nbr = 'q' . $i;
             $nbrq = $request->$nbr;
@@ -66,10 +66,9 @@ class Tcf_canada_ceController extends Controller
                 'answer' => $answ
             ]);
 
-            echo $nbrq . '->' . $quest . '->' . $answ . '<br>';
+            // echo $nbrq . '->' . $quest . '->' . $answ . '<br>';
         }
-        Continue
-        return redirect()->route('user/emp/cm/' . $id . '/tcfcanada');
+        return redirect('user/emp/cm/' . $id . '/tcfcanada');
     }
 
     /**
