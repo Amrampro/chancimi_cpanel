@@ -13,6 +13,6 @@ jobs:
     - name: FTP-Deploy-Actioon
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        ftp-server: ftp.chancimi.com
-        ftp-username: c2093974c
-        ftp-password: ?G$77sE-Jxc8
+        server: ftp.chancimi.com
+        username: c2093974c
+        password: ?G$77sE-Jxc8
