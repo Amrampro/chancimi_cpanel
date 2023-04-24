@@ -1,19 +1,18 @@
 name : Publish website to CPanel
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 jobs:
   FTP-deploy-actions:
-    name:FTP-Deploy-Action
-    runs-on:ubuntu-latest
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
     steps:
-    - uses actions/checkout@2.1.0
-        with:
+    - uses: actions/checkout@2.1.0
+      with:
         fetch-depth: 2
     - name: FTP-Deploy-Actioon
       uses: SamKirland/FTP-Deploy-Actiohn@3.1.1
       with:
-        ftp-server:ftp.chancimi.com
-        ftp-username:c2093974c
-        ftp-password:?G$77sE-Jxc8
+        ftp-server: ftp.chancimi.com
+        ftp-username: c2093974c
+        ftp-password: ?G$77sE-Jxc8
